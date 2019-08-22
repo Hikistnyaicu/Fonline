@@ -952,7 +952,7 @@ void critter_init( Critter& cr, bool firstTime )
             for( uint i = ST_STRENGTH; i <= ST_LUCK; i++ )
                 cr.StatBase[ i ] = CLAMP( cr.StatBase[ i ], 1, 10 );
 
-            cr.StatBase[ ST_REPLICATION_COST ] = 100;
+            cr.StatBase[ ST_REPLICATION_COST ] = 0;
             cr.StatBase[ ST_REPLICATION_MONEY ] = 0;
             cr.StatBase[ ST_REPLICATION_COUNT ] = 0;
             cr.StatBase[ ST_TEAM_ID ] = 1;
@@ -1406,7 +1406,7 @@ void player_levelup( Critter& player, uint skillIndex, uint skillUp, uint perkIn
         }
     }
 
-    player.StatBase[ ST_REPLICATION_COST ] = player.Stat[ ST_LEVEL ] * 100;
+    player.StatBase[ ST_REPLICATION_COST ] = 0;
 }
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////
