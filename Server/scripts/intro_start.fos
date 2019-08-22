@@ -158,6 +158,7 @@ void r_changeVADIM( Critter& player, Critter@ terminal )
 	player.StatBase[ST_EMP_RESIST]+=999;
 	player.StatBase[ST_EXPLODE_RESIST]+=999; //-20
 	player.SkillBase[SK_SNEAK]=999;
+	player.StatBase[ST_MELEE_DAMAGE]=999;
 	Critter@ toCr=GetCritter(player.Id);
 	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
 	player.StatBase[ST_STRENGTH]+=10;

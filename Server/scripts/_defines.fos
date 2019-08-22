@@ -871,6 +871,7 @@
 #define SCORE_UNARMED_DAMAGE                     ( 19 )
 #define SCORE_RITCH                              ( 20 )
 #define SCORE_CHOSEN_ONE                         ( 21 )
+#define SCORE_KILLER_CHILD                       ( 22 )
 #define SCORE_SIERRA_CUR                         ( 40 )
 #define SCORE_MARIPOSA_CUR                       ( 41 )
 #define SCORE_CATHEDRAL_CUR                      ( 42 )
@@ -881,7 +882,7 @@
 #define SCORE_MARIPOSA_ORG                       ( 47 )
 #define SCORE_CATHEDRAL_ORG                      ( 48 )
 #define SCORE_BASE_BEST_ORG                      ( 49 )
-#define SCORES_MAX                               ( 50 )
+#define SCORES_MAX                               ( 100 )
 
 // Car flags
 #define CAR_BIO_ENGINE                           ( 0x0001 )

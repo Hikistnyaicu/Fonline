@@ -219,7 +219,7 @@ EXPORT_UNINITIALIZED const char* (ScriptGetLibraryVersion) ( );
 
 #define LEXEMS_SIZE                  ( 128 )
 #define MAX_HOLO_INFO                ( 250 )
-#define SCORES_MAX                   ( 50 )
+#define SCORES_MAX                   ( 100 )
 #define MAX_NPC_BAGS_PACKS           ( 20 )
 #define MAX_ENEMY_STACK              ( 30 )
 #define MAX_NPC_BAGS                 ( 50 )

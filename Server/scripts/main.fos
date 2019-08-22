@@ -1174,9 +1174,10 @@ void critter_dead( Critter& cr, Critter@ killer )
         else if( team == TEAM_Trapper )
             killer.StatBase[ ST_KARMA ] -= 10;
 
-        if( cr.Stat[ ST_BODY_TYPE ] == BT_CHILDREN )
+        if( cr.Stat[ ST_BODY_TYPE ] == BT_CHILDREN ){
             killer.KarmaBase[ KARMA_CHILDKILLER ]++;
-
+            killer.AddScore( SCORE_KILLER_CHILD, 1 );
+		}
         CallTownSupply( cr, killer );      // Town supply call
     }
 

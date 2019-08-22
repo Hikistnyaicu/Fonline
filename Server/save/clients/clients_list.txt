@@ -18,3 +18,4 @@ fasfsa.client
 авыаыв.client
 выфвыф.client
 hgfhfghfghbcve.client
+ЛюблюМальчиков.client
