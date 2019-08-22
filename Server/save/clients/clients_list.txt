@@ -7,3 +7,5 @@ Dniwe3.client
 Dniwe4.client
 Azaza.client
 Jasda.client
+Asdaag.client
+Ыфыфа.client
