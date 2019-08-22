@@ -2634,31 +2634,31 @@ void CritterGenerate(int[]&params)
 		params[(205)]-=10;
 	}     
 	
-	params[(200)]+=5+4*params[(5)];
-	params[(201)]+=0+2*params[(5)];
-	params[(202)]+=0+2*params[(5)];
-	params[(203)]+=30+2*(params[(5)]+params[(0)]);
+	params[(200)]+=5+4*(params[(5)]+params[(1)]);
+	params[(201)]+=0+2*(params[(5)]+params[(1)]+params[(0)]);
+	params[(202)]+=0+2*(params[(5)]+params[(1)]+params[(4)]);
+	params[(203)]+=60+2*(params[(5)]+params[(0)]);
 	params[(204)]+=20+2*(params[(5)]+params[(0)]);
-	params[(205)]+=0+4*params[(5)];
+	params[(205)]+=0+4*(params[(5)]+params[(1)]+params[(0)]);
 	params[(206)]+=0+2*(params[(1)]+params[(4)]);
 	params[(207)]+=5+params[(1)]+params[(4)];
-	params[(208)]+=5+3*params[(5)];
-	params[(209)]+=10+params[(1)]+params[(5)];
-	params[(210)]+=0+3*params[(5)];
-	params[(211)]+=10+params[(1)]+params[(5)];
+	params[(208)]+=5+3*(params[(5)]+params[(1)]);
+	params[(209)]+=10+(params[(5)]+params[(1)]+params[(4)]);
+	params[(210)]+=0+3*(params[(5)]+params[(1)]);
+	params[(211)]+=10+(params[(5)]+params[(1)]+params[(4)]);
 	params[(212)]+=0+4*params[(4)];
 	params[(213)]+=0+3*params[(4)];
-	params[(214)]+=0+5*params[(3)];
-	params[(215)]+=0+4*params[(3)];
+	params[(214)]+=0+5*(params[(4)]+params[(3)]);
+	params[(215)]+=0+4*(params[(4)]+params[(3)]);
 	params[(216)]+=0+5*params[(6)];
-	params[(217)]+=0+2*(params[(2)]+params[(4)]);
+	params[(217)]+=0+2*(params[(2)]+params[(1)]+params[(4)]);
 	
 	if(params[(226)]!=0)
-	params[params[(226)]]+=20;
+	params[params[(226)]]+=80;
 	if(params[(227)]!=0)
-	params[params[(227)]]+=20;
+	params[params[(227)]]+=80;
 	if(params[(228)]!=0)
-	params[params[(228)]]+=20;
+	params[params[(228)]]+=80;
 	
 	if(params[(550)]!=0)
 	{
@@ -2674,7 +2674,7 @@ void CritterGenerate(int[]&params)
 		params[(12)]+=5;
 	}
 	if(params[(556)]!=0)
-	params[(10)]+=4;
+	params[(10)]+=20;
 	if(params[(554)]!=0)
 	params[(14)]+=10;
 	if(params[(556)]!=0)

@@ -39,7 +39,7 @@ void InitializeGame()                    // Export
     __RtApCostCritterWalk       = 0;     // 1 AP == 100, maximim 255
     __RtApCostCritterRun        = 0;     // 1 AP == 100, maximim 255
     __RtApCostMoveItemContainer = 0;
-    __RtApCostMoveItemInventory = 2;
+    __RtApCostMoveItemInventory = 1;
     __RtApCostPickItem          = 1;
     __RtApCostDropItem          = 1;
     __RtApCostReloadWeapon      = 2;
@@ -78,22 +78,22 @@ void InitializeGame()                    // Export
     __GlobalMapMaxGroupCount    = 10;
     __GlobalMapMoveTime         = 250;
     __EncounterTime             = 5000;
-    __DeadHitPoints             = -20;
+    __DeadHitPoints             = -8;
     __BagRefreshTime            = 60;     // Real minutes
-    __WisperDist                = 2;
+    __WisperDist                = 5;
     __ShoutDist                 = 400;
     __CustomItemCost            = false;
-    __RegistrationTimeout       = 5 * 60;  // In real seconds, 0 to disable
-    __AccountPlayTime           = 10 * 60; // In real seconds, 0 to disable
-    __TalkDistance              = 3;
+    __RegistrationTimeout       = 0;  // In real seconds, 0 to disable
+    __AccountPlayTime           = 0; // In real seconds, 0 to disable
+    __TalkDistance              = 6;
     __NpcMaxTalkers             = 1;
-    __MinNameLength             = 4;       // Minimum 1
-    __MaxNameLength             = 12;      // Maximum 30
+    __MinNameLength             = 3;       // Minimum 1
+    __MaxNameLength             = 15;      // Maximum 30
     __PermanentDeath            = 0;       // Disable
     __DlgTalkMinTime            = 100000;
     __DlgBarterMinTime          = 50000;
     __MinimumOfflineTime        = 180000;  // 3 minutes
-    __MainStoryLineActive       = true;
+    __MainStoryLineActive       = false;
     __NoPvpMaps                 = true;
     __MaxLifeLevelSoftCap       = 36;
     // Look modifiers
@@ -165,7 +165,7 @@ void InitializeGame()                    // Export
     __DisableLMenu          = false;
     __DisableMouseEvents    = false;
     __DisableKeyboardEvents = false;
-    __HidePassword          = true;
+    __HidePassword          = false;
     __PlayerOffAppendix     = "|0x44ffffff  (off)";
     __SpritesZoomMax        = 2.5f;
     __SpritesZoomMin        = 0.2f;

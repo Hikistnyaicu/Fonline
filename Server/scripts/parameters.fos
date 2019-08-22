@@ -57,11 +57,11 @@ void changedParam_Experience( Critter& cr, uint, int oldValue )
                 if( cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] > 999 )
                     cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] = 999;                                                      // Clamp skill points
                 if( __MaxLifeLevelSoftCap == 0 || uint( cr.Stat[ ST_LEVEL ] ) <= __MaxLifeLevelSoftCap )
-                    cr.StatBase[ ST_MAX_LIFE ] += 2;  // Add max hp
+                    cr.StatBase[ ST_MAX_LIFE ] += 2 + cr.StatBase[ ST_ENDURANCE ] * 20 + cr.Perk[ PE_LIFEGIVER ] * 50;  // Add max hp
 
                 if( ( level % perkUp ) == 0 )
                 {
-                    cr.StatBase[ ST_UNSPENT_PERKS ] = 10;
+                    cr.StatBase[ ST_UNSPENT_PERKS ] = 100;
                 }
             }
             else
@@ -216,31 +216,31 @@ void CritterGenerate( int[]& params ) // Export to client_main@player_data_gener
     //	for(uint i=SKILL_BEGIN;i<=SKILL_END;i++) _param_[i]-=10;
     // }
 
-    _param_[ SK_SMALL_GUNS ] += 5 + 4 * _param_[ ST_AGILITY ];
-    _param_[ SK_BIG_GUNS ] += 0 + 2 * _param_[ ST_AGILITY ];
-    _param_[ SK_ENERGY_WEAPONS ] += 0 + 2 * _param_[ ST_AGILITY ];
-    _param_[ SK_UNARMED ] += 30 + 2 * ( _param_[ ST_AGILITY ] + _param_[ ST_STRENGTH ] );
+    _param_[ SK_SMALL_GUNS ] += 5 + 4 * ( _param_[ ST_AGILITY ] + _param_[ ST_PERCEPTION ] );
+    _param_[ SK_BIG_GUNS ] += 0 + 2 * ( _param_[ ST_AGILITY ] + _param_[ ST_PERCEPTION ] + _param_[ ST_STRENGTH ]);
+    _param_[ SK_ENERGY_WEAPONS ] += 0 + 2 * ( _param_[ ST_AGILITY ] + _param_[ ST_PERCEPTION ] + _param_[ ST_INTELLECT ]);
+    _param_[ SK_UNARMED ] += 60 + 2 * ( _param_[ ST_AGILITY ] + _param_[ ST_STRENGTH ] );
     _param_[ SK_MELEE_WEAPONS ] += 20 + 2 * ( _param_[ ST_AGILITY ] + _param_[ ST_STRENGTH ] );
-    _param_[ SK_THROWING ] += 0 + 4 * _param_[ ST_AGILITY ];
+    _param_[ SK_THROWING ] += 0 + 4 * ( _param_[ ST_AGILITY ] + _param_[ ST_PERCEPTION ] + _param_[ ST_STRENGTH ]);
     _param_[ SK_FIRST_AID ] += 0 + 2 * ( _param_[ ST_PERCEPTION ] + _param_[ ST_INTELLECT ] );
     _param_[ SK_DOCTOR ] += 5 + _param_[ ST_PERCEPTION ] + _param_[ ST_INTELLECT ];
-    _param_[ SK_SNEAK ] += 5 + 3 * _param_[ ST_AGILITY ];
-    _param_[ SK_LOCKPICK ] += 10 + _param_[ ST_PERCEPTION ] + _param_[ ST_AGILITY ];
-    _param_[ SK_STEAL ] += 0 + 3 * _param_[ ST_AGILITY ];
-    _param_[ SK_TRAPS ] += 10 + _param_[ ST_PERCEPTION ] + _param_[ ST_AGILITY ];
+    _param_[ SK_SNEAK ] += 5 + 3 * ( _param_[ ST_AGILITY ] + _param_[ ST_PERCEPTION ] );
+    _param_[ SK_LOCKPICK ] += 10 + ( _param_[ ST_AGILITY] + _param_[ ST_PERCEPTION ] + _param_[ ST_INTELLECT ]);
+    _param_[ SK_STEAL ] += 0 + 3 * ( _param_[ ST_AGILITY ] + _param_[ ST_PERCEPTION ] );
+    _param_[ SK_TRAPS ] += 10 + ( _param_[ ST_AGILITY] + _param_[ ST_PERCEPTION ] + _param_[ ST_INTELLECT ]);
     _param_[ SK_SCIENCE ] += 0 + 4 * _param_[ ST_INTELLECT ];
     _param_[ SK_REPAIR ] += 0 + 3 * _param_[ ST_INTELLECT ];
-    _param_[ SK_SPEECH ] += 0 + 5 * _param_[ ST_CHARISMA ];
-    _param_[ SK_BARTER ] += 0 + 4 * _param_[ ST_CHARISMA ];
+    _param_[ SK_SPEECH ] += 0 + 5 * ( _param_[ ST_INTELLECT] + _param_[ ST_CHARISMA] );
+    _param_[ SK_BARTER ] += 0 + 4 * ( _param_[ ST_INTELLECT] + _param_[ ST_CHARISMA] );
     _param_[ SK_GAMBLING ] += 0 + 5 * _param_[ ST_LUCK ];
-    _param_[ SK_OUTDOORSMAN ] += 0 + 2 * ( _param_[ ST_ENDURANCE ] + _param_[ ST_INTELLECT ] );
+    _param_[ SK_OUTDOORSMAN ] += 0 + 2 * ( _param_[ ST_ENDURANCE ] + _param_[ ST_PERCEPTION ] + _param_[ ST_INTELLECT ]);
 
     if( _param_[ TAG_SKILL1 ] != 0 )
-        _param_[ _param_[ TAG_SKILL1 ] ] += 20;
+        _param_[ _param_[ TAG_SKILL1 ] ] += 80;
     if( _param_[ TAG_SKILL2 ] != 0 )
-        _param_[ _param_[ TAG_SKILL2 ] ] += 20;
+        _param_[ _param_[ TAG_SKILL2 ] ] += 80;
     if( _param_[ TAG_SKILL3 ] != 0 )
-        _param_[ _param_[ TAG_SKILL3 ] ] += 20;
+        _param_[ _param_[ TAG_SKILL3 ] ] += 80;
 
     if( _param_[ TRAIT_FAST_METABOLISM ] != 0 )
     {
@@ -256,7 +256,7 @@ void CritterGenerate( int[]& params ) // Export to client_main@player_data_gener
         _param_[ ST_SEQUENCE ] += 5;
     }
     if( _param_[ TRAIT_HEAVY_HANDED ] != 0 )
-        _param_[ ST_MELEE_DAMAGE ] += 4;
+        _param_[ ST_MELEE_DAMAGE ] += 20;
     if( _param_[ TRAIT_FINESSE ] != 0 )
         _param_[ ST_CRITICAL_CHANCE ] += 10;
     if( _param_[ TRAIT_HEAVY_HANDED ] != 0 )

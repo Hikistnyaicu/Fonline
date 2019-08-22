@@ -155,7 +155,7 @@ void SetReplicationTime( Critter& cr ) // Export
     if( replTime == 0 )                    // Take default values
     {
         if( cr.IsPlayer() )
-            replTime = 3;                  // 3 minutes
+            replTime = 1;                  // 3 minutes
         else
             replTime = Random( 90, 120 );  // 90-120 minutes
     }

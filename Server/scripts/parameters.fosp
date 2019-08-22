@@ -127,31 +127,31 @@ void CritterGenerate(Critter&cr)
 		cr.ParamBase[(205)]-=10;
 	}     
 	
-	cr.ParamBase[(200)]+=5+4*cr.ParamBase[(5)];
-	cr.ParamBase[(201)]+=0+2*cr.ParamBase[(5)];
-	cr.ParamBase[(202)]+=0+2*cr.ParamBase[(5)];
-	cr.ParamBase[(203)]+=30+2*(cr.ParamBase[(5)]+cr.ParamBase[(0)]);
+	cr.ParamBase[(200)]+=5+4*(cr.ParamBase[(5)]+cr.ParamBase[(1)]);
+	cr.ParamBase[(201)]+=0+2*(cr.ParamBase[(5)]+cr.ParamBase[(1)]+cr.ParamBase[(0)]);
+	cr.ParamBase[(202)]+=0+2*(cr.ParamBase[(5)]+cr.ParamBase[(1)]+cr.ParamBase[(4)]);
+	cr.ParamBase[(203)]+=60+2*(cr.ParamBase[(5)]+cr.ParamBase[(0)]);
 	cr.ParamBase[(204)]+=20+2*(cr.ParamBase[(5)]+cr.ParamBase[(0)]);
-	cr.ParamBase[(205)]+=0+4*cr.ParamBase[(5)];
+	cr.ParamBase[(205)]+=0+4*(cr.ParamBase[(5)]+cr.ParamBase[(1)]+cr.ParamBase[(0)]);
 	cr.ParamBase[(206)]+=0+2*(cr.ParamBase[(1)]+cr.ParamBase[(4)]);
 	cr.ParamBase[(207)]+=5+cr.ParamBase[(1)]+cr.ParamBase[(4)];
-	cr.ParamBase[(208)]+=5+3*cr.ParamBase[(5)];
-	cr.ParamBase[(209)]+=10+cr.ParamBase[(1)]+cr.ParamBase[(5)];
-	cr.ParamBase[(210)]+=0+3*cr.ParamBase[(5)];
-	cr.ParamBase[(211)]+=10+cr.ParamBase[(1)]+cr.ParamBase[(5)];
+	cr.ParamBase[(208)]+=5+3*(cr.ParamBase[(5)]+cr.ParamBase[(1)]);
+	cr.ParamBase[(209)]+=10+(cr.ParamBase[(5)]+cr.ParamBase[(1)]+cr.ParamBase[(4)]);
+	cr.ParamBase[(210)]+=0+3*(cr.ParamBase[(5)]+cr.ParamBase[(1)]);
+	cr.ParamBase[(211)]+=10+(cr.ParamBase[(5)]+cr.ParamBase[(1)]+cr.ParamBase[(4)]);
 	cr.ParamBase[(212)]+=0+4*cr.ParamBase[(4)];
 	cr.ParamBase[(213)]+=0+3*cr.ParamBase[(4)];
-	cr.ParamBase[(214)]+=0+5*cr.ParamBase[(3)];
-	cr.ParamBase[(215)]+=0+4*cr.ParamBase[(3)];
+	cr.ParamBase[(214)]+=0+5*(cr.ParamBase[(4)]+cr.ParamBase[(3)]);
+	cr.ParamBase[(215)]+=0+4*(cr.ParamBase[(4)]+cr.ParamBase[(3)]);
 	cr.ParamBase[(216)]+=0+5*cr.ParamBase[(6)];
-	cr.ParamBase[(217)]+=0+2*(cr.ParamBase[(2)]+cr.ParamBase[(4)]);
+	cr.ParamBase[(217)]+=0+2*(cr.ParamBase[(2)]+cr.ParamBase[(1)]+cr.ParamBase[(4)]);
 	
 	if(cr.ParamBase[(226)]!=0)
-	cr.ParamBase[cr.ParamBase[(226)]]+=20;
+	cr.ParamBase[cr.ParamBase[(226)]]+=80;
 	if(cr.ParamBase[(227)]!=0)
-	cr.ParamBase[cr.ParamBase[(227)]]+=20;
+	cr.ParamBase[cr.ParamBase[(227)]]+=80;
 	if(cr.ParamBase[(228)]!=0)
-	cr.ParamBase[cr.ParamBase[(228)]]+=20;
+	cr.ParamBase[cr.ParamBase[(228)]]+=80;
 	
 	if(cr.ParamBase[(550)]!=0)
 	{
@@ -167,7 +167,7 @@ void CritterGenerate(Critter&cr)
 		cr.ParamBase[(12)]+=5;
 	}
 	if(cr.ParamBase[(556)]!=0)
-	cr.ParamBase[(10)]+=4;
+	cr.ParamBase[(10)]+=20;
 	if(cr.ParamBase[(554)]!=0)
 	cr.ParamBase[(14)]+=10;
 	if(cr.ParamBase[(556)]!=0)

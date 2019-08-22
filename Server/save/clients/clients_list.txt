@@ -1,2 +1,4 @@
 Admin.client
 Admin2.client
+Test.client
+Dniwe.client
