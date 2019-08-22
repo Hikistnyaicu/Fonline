@@ -316,7 +316,7 @@ void SetReplicationTime(Critter&cr)
 	if(replTime==0)
 	{
 		if(cr.IsPlayer())
-		replTime=3;
+		replTime=1;
 		else
 		replTime=Random(90,120);
 	}

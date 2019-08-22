@@ -1,3 +1,4 @@
 Криттеры:
 CritterTypes.cfg
 
+parameters.fos - отвечает за... хз, какие-то статы

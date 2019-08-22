@@ -176,7 +176,7 @@ void PerkUp( Critter& cr, uint perk ) // Export
         PERKUP_STAT( ST_ACTION_POINTS, += 1 );
         break;
     case PE_LIFEGIVER:
-        PERKUP_STAT( ST_MAX_LIFE, += 4 );
+        PERKUP_STAT( ST_MAX_LIFE, += 75 );
         break;
     case PE_DODGER:
         PERKUP_STAT( ST_ARMOR_CLASS, += 5 );

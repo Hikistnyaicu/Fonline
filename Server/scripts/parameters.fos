@@ -57,7 +57,7 @@ void changedParam_Experience( Critter& cr, uint, int oldValue )
                 if( cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] > 999 )
                     cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] = 999;                                                      // Clamp skill points
                 if( __MaxLifeLevelSoftCap == 0 || uint( cr.Stat[ ST_LEVEL ] ) <= __MaxLifeLevelSoftCap )
-                    cr.StatBase[ ST_MAX_LIFE ] += 2 + cr.StatBase[ ST_ENDURANCE ] * 20 + cr.Perk[ PE_LIFEGIVER ] * 50;  // Add max hp
+                    cr.StatBase[ ST_MAX_LIFE ] += 0;  // Add max hp
 
                 if( ( level % perkUp ) == 0 )
                 {
@@ -437,7 +437,7 @@ int getParam_Hp( Critter& cr, uint )
 
 int getParam_MaxLife( Critter& cr, uint )
 {
-    int val = cr.ParamBase[ ST_MAX_LIFE ] + cr.ParamBase[ ST_MAX_LIFE_EXT ] + cr.ParamBase[ ST_STRENGTH ] + cr.ParamBase[ ST_ENDURANCE ] * 2;
+    int val = cr.ParamBase[ ST_MAX_LIFE ] + cr.ParamBase[ ST_MAX_LIFE_EXT ] + cr.ParamBase[ ST_STRENGTH ] + cr.ParamBase[ ST_ENDURANCE ] * 20;
     return CLAMP( val, 1, 9999 );
 }
 

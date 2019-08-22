@@ -6,7 +6,7 @@ Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<74>, receive<808297>, whole<808371>, receive real<918345>.
+Disconnect. Session traffic: send<74>, receive<808206>, whole<808280>, receive real<918345>.
 Loaded<325> critter types.
 Load scripts...
 Bind reserved functions...
@@ -24,12 +24,12 @@ Hex field initialization complete.
 Engine initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<84>, receive<808741>, whole<808825>, receive real<919130>.
+Disconnect. Session traffic: send<84>, receive<808651>, whole<808735>, receive real<919130>.
 Connecting to server<localhost:4000>.
 Connection established.
 Player registration...complete.
 Registration success.
-Disconnect. Session traffic: send<326>, receive<808775>, whole<809101>, receive real<919149>.
+Disconnect. Session traffic: send<314>, receive<808685>, whole<808999>, receive real<919149>.
 Connecting to server<localhost:4000>.
 Connection established.
 Authentication success.
@@ -40,20 +40,5 @@ Local map loaded.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Disconnect. Session traffic: send<1745>, receive<812518>, whole<814263>, receive real<929197>.
-Connecting to server<localhost:4000>.
-Connection established.
-Disconnect. Session traffic: send<1755>, receive<812962>, whole<814717>, receive real<929982>.
-Connecting to server<localhost:4000>.
-Connection established.
-Authentication success.
-Change map...
-Get hash of map, pid<221>...complete.
-Load map...Load map success.
-Local map loaded.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Chosen parameters...complete.
-Disconnect. Session traffic: send<4321>, receive<823744>, whole<828065>, receive real<964265>.
+Disconnect. Session traffic: send<1902>, receive<813227>, whole<815129>, receive real<931646>.
 Exit from game.

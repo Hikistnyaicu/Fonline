@@ -45,11 +45,11 @@ void changedParam_Experience(Critter&cr,uint,int oldValue)
 				if(cr.StatBase[(78)]>999)
 				cr.StatBase[(78)]=999;
 				if(__MaxLifeLevelSoftCap==0||uint(cr.Stat[(77)])<=__MaxLifeLevelSoftCap)
-				cr.StatBase[(7)]+=2;
+				cr.StatBase[(7)]+=0;
 				
 				if((level%perkUp)==0)
 				{
-					cr.StatBase[(79)]=10;
+					cr.StatBase[(79)]=100;
 				}
 			}
 			else
@@ -280,7 +280,7 @@ int getParam_Hp(Critter&cr,uint)
 
 int getParam_MaxLife(Critter&cr,uint)
 {
-	int val=cr.ParamBase[(7)]+cr.ParamBase[(39)]+cr.ParamBase[(0)]+cr.ParamBase[(2)]*2;
+	int val=cr.ParamBase[(7)]+cr.ParamBase[(39)]+cr.ParamBase[(0)]+cr.ParamBase[(2)]*20;
 	return(((val)>(9999))?(9999):(((val)<(1))?(1):(val)));
 }
 

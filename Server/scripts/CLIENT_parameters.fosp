@@ -2819,7 +2819,7 @@ int getParam_Hp(CritterCl&cr,uint)
 
 int getParam_MaxLife(CritterCl&cr,uint)
 {
-	int val=cr.ParamBase[(7)]+cr.ParamBase[(39)]+cr.ParamBase[(0)]+cr.ParamBase[(2)]*2;
+	int val=cr.ParamBase[(7)]+cr.ParamBase[(39)]+cr.ParamBase[(0)]+cr.ParamBase[(2)]*20;
 	return(((val)>(9999))?(9999):(((val)<(1))?(1):(val)));
 }
 
