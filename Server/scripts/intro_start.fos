@@ -2,128 +2,169 @@
 #include "_macros.fos"
 #include "_dialogs.fos"
 
-// terminal == null
-
-#define FORCE_DIALOG_PAY_SELF          ( 3 )
-#define FORCE_DIALOG_PAY_OTHER_NEXT    ( 8 )
-
-#define STR_GENERIC_ERROR              ( DLGSTR( DIALOG_start_terminal, 0 ) ) // Критическая ошибка. Пожалуйста обратитесь в службу поддержки.
-#define STR_PLAYER_NOT_FOUND           ( DLGSTR( DIALOG_start_terminal, 1 ) ) // Данный клиент не найден. Возможно вы ошиблись в имени, либо клиент не в зоне доступа.
-#define STR_INVALID_MONEY_COUNT        ( DLGSTR( DIALOG_start_terminal, 2 ) )
-#define STR_ZERO_MONEY_COUNT           ( DLGSTR( DIALOG_start_terminal, 3 ) )
-#define STR_NEGATIVE_MONEY_COUNT       ( DLGSTR( DIALOG_start_terminal, 4 ) )
-#define STR_NOT_ENAUGTH_MONEY          ( DLGSTR( DIALOG_start_terminal, 5 ) )
-#define STR_ZERO_BALANCE               ( DLGSTR( DIALOG_start_terminal, 6 ) )
-#define STR_NEGATIVE_BALANCE           ( DLGSTR( DIALOG_start_terminal, 7 ) )
-#define STR_OPERATION_SUCCESS          ( DLGSTR( DIALOG_start_terminal, 10 ) )
-
-#define SEND_ERROR_RETURN              # ( cr, error )     { cr.SayMsg( SAY_DIALOG, TEXTMSG_DLG, error ); return; }
-#define SEND_ERROR_RETURN0             # ( cr, error )     { cr.SayMsg( SAY_DIALOG, TEXTMSG_DLG, error ); return 0; }
-
 bool s_Terminal( Critter& player, Scenery& terminal, int skill, Item@ item )
 {
     if( player.IsPlayer() && skill == -1 && not valid( item ) )
         RunDialog( player, DIALOG_start_terminal, terminal.HexX, terminal.HexY, false );
     return true;
 }
+//давай не заниматься плохой практикой удалим ЕГО и изменим переменные на нормальные англ.слова
+//так же все другие расы сейчас копии мутанта, нужно продумать статы и найти клитеры
+//так же сейчас затыкивать можно хоть до смерти, надо команду выкидывания на глобал.
+//ЕГО заменим на вариант остаться человеком и улететь в глобал
 
-void r_PaySelf( Critter& player, Critter@ terminal )
+//становление мутанта
+void r_changeMYT( Critter& player, Critter@ terminal )
 {
-    GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
-    if( not valid( var ) )
-        SEND_ERROR_RETURN( player, STR_GENERIC_ERROR );
-    var = player.Id;
+	Item@ armor=player.GetItem(0,SLOT_ARMOR);
+	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
+	player.ChangeCrType(20);
+	player.StatBase[ST_BASE_CRTYPE]=20; 
+	player.StatBase[ST_MAX_LIFE]+=350; 
+	player.StatBase[ST_NORMAL_ABSORB]+=6; //-7
+	player.StatBase[ST_LASER_ABSORB]+=6; //-7
+	player.StatBase[ST_FIRE_ABSORB]+=6; //-7
+	player.StatBase[ST_PLASMA_ABSORB]+=6; //-7
+	player.StatBase[ST_ELECTRO_ABSORB]=0;
+	player.StatBase[ST_EMP_ABSORB]+=500;
+	player.StatBase[ST_EXPLODE_ABSORB]+=6; //-6
+	player.StatBase[ST_ARMOR_CLASS]+=20;
+	player.StatBase[ST_RADIATION_RESISTANCE]=95;
+	player.StatBase[ST_NORMAL_RESIST]+=30; //-30
+	player.StatBase[ST_LASER_RESIST]+=25; //-25
+	player.StatBase[ST_FIRE_RESIST]+=25; //-25
+	player.StatBase[ST_PLASMA_RESIST]+=25; //-25
+	player.StatBase[ST_ELECTRO_RESIST]=0;
+	player.StatBase[ST_EMP_RESIST]+=90;
+	player.StatBase[ST_EXPLODE_RESIST]+=25; //-20
+	player.SkillBase[SK_SNEAK]=-250;
+	Critter@ toCr=GetCritter(player.Id);
+	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
+	player.StatBase[ST_STRENGTH]+=3;
+	player.StatBase[ST_ENDURANCE]+=3;
 }
-
-uint dlg_ChoosePlayer( Critter& player, Critter@ terminal, string@ playerName )
+//становление гуля
+void r_changeGul( Critter& player, Critter@ terminal )
 {
-    if( not IS_DIALOG_SAY_MODE( playerName ) )
-        return 0;
-
-    GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
-    if( not valid( var ) )
-        SEND_ERROR_RETURN0( player, STR_GENERIC_ERROR );
-    var = 0;
-
-    Critter@ cr = GetPlayer( playerName );
-    if( not valid( cr ) )
-        SEND_ERROR_RETURN0( player, STR_PLAYER_NOT_FOUND );
-
-    var = cr.Id;
-    if( cr.Id == player.Id )
-        return FORCE_DIALOG_PAY_SELF;
-    return FORCE_DIALOG_PAY_OTHER_NEXT;
+	Item@ armor=player.GetItem(0,SLOT_ARMOR);
+	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
+	player.ChangeCrType(20);
+	player.StatBase[ST_BASE_CRTYPE]=20; 
+	player.StatBase[ST_MAX_LIFE]+=350; 
+	player.StatBase[ST_NORMAL_ABSORB]+=6; //-7
+	player.StatBase[ST_LASER_ABSORB]+=6; //-7
+	player.StatBase[ST_FIRE_ABSORB]+=6; //-7
+	player.StatBase[ST_PLASMA_ABSORB]+=6; //-7
+	player.StatBase[ST_ELECTRO_ABSORB]=0;
+	player.StatBase[ST_EMP_ABSORB]+=500;
+	player.StatBase[ST_EXPLODE_ABSORB]+=6; //-6
+	player.StatBase[ST_ARMOR_CLASS]+=20;
+	player.StatBase[ST_RADIATION_RESISTANCE]=95;
+	player.StatBase[ST_NORMAL_RESIST]+=30; //-30
+	player.StatBase[ST_LASER_RESIST]+=25; //-25
+	player.StatBase[ST_FIRE_RESIST]+=25; //-25
+	player.StatBase[ST_PLASMA_RESIST]+=25; //-25
+	player.StatBase[ST_ELECTRO_RESIST]=0;
+	player.StatBase[ST_EMP_RESIST]+=90;
+	player.StatBase[ST_EXPLODE_RESIST]+=25; //-20
+	player.SkillBase[SK_SNEAK]=-250;
+	Critter@ toCr=GetCritter(player.Id);
+	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
+	player.StatBase[ST_STRENGTH]+=3;
+	player.StatBase[ST_ENDURANCE]+=3;
 }
-
-void dlg_TransferReal( Critter& player, Critter@ terminal, string@ moneyCount )
+//становление робота
+void r_changeROBOT( Critter& player, Critter@ terminal )
 {
-    if( not IS_DIALOG_SAY_MODE( moneyCount ) )
-        return;
-    TransferMoney( player, moneyCount, true );
+	Item@ armor=player.GetItem(0,SLOT_ARMOR);
+	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
+	player.ChangeCrType(20);
+	player.StatBase[ST_BASE_CRTYPE]=20; 
+	player.StatBase[ST_MAX_LIFE]+=350; 
+	player.StatBase[ST_NORMAL_ABSORB]+=6; //-7
+	player.StatBase[ST_LASER_ABSORB]+=6; //-7
+	player.StatBase[ST_FIRE_ABSORB]+=6; //-7
+	player.StatBase[ST_PLASMA_ABSORB]+=6; //-7
+	player.StatBase[ST_ELECTRO_ABSORB]=0;
+	player.StatBase[ST_EMP_ABSORB]+=500;
+	player.StatBase[ST_EXPLODE_ABSORB]+=6; //-6
+	player.StatBase[ST_ARMOR_CLASS]+=20;
+	player.StatBase[ST_RADIATION_RESISTANCE]=95;
+	player.StatBase[ST_NORMAL_RESIST]+=30; //-30
+	player.StatBase[ST_LASER_RESIST]+=25; //-25
+	player.StatBase[ST_FIRE_RESIST]+=25; //-25
+	player.StatBase[ST_PLASMA_RESIST]+=25; //-25
+	player.StatBase[ST_ELECTRO_RESIST]=0;
+	player.StatBase[ST_EMP_RESIST]+=90;
+	player.StatBase[ST_EXPLODE_RESIST]+=25; //-20
+	player.SkillBase[SK_SNEAK]=-250;
+	Critter@ toCr=GetCritter(player.Id);
+	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
+	player.StatBase[ST_STRENGTH]+=3;
+	player.StatBase[ST_ENDURANCE]+=3;
 }
-
-void dlg_TransferVirtual( Critter& player, Critter@ terminal, string@ moneyCount )
+//становление когтя-смерти
+void r_changeCLOW( Critter& player, Critter@ terminal )
 {
-    if( not IS_DIALOG_SAY_MODE( moneyCount ) )
-        return;
-    TransferMoney( player, moneyCount, false );
+	Item@ armor=player.GetItem(0,SLOT_ARMOR);
+	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
+	player.ChangeCrType(20);
+	player.StatBase[ST_BASE_CRTYPE]=20; 
+	player.StatBase[ST_MAX_LIFE]+=350; 
+	player.StatBase[ST_NORMAL_ABSORB]+=6; //-7
+	player.StatBase[ST_LASER_ABSORB]+=6; //-7
+	player.StatBase[ST_FIRE_ABSORB]+=6; //-7
+	player.StatBase[ST_PLASMA_ABSORB]+=6; //-7
+	player.StatBase[ST_ELECTRO_ABSORB]=0;
+	player.StatBase[ST_EMP_ABSORB]+=500;
+	player.StatBase[ST_EXPLODE_ABSORB]+=6; //-6
+	player.StatBase[ST_ARMOR_CLASS]+=20;
+	player.StatBase[ST_RADIATION_RESISTANCE]=95;
+	player.StatBase[ST_NORMAL_RESIST]+=30; //-30
+	player.StatBase[ST_LASER_RESIST]+=25; //-25
+	player.StatBase[ST_FIRE_RESIST]+=25; //-25
+	player.StatBase[ST_PLASMA_RESIST]+=25; //-25
+	player.StatBase[ST_ELECTRO_RESIST]=0;
+	player.StatBase[ST_EMP_RESIST]+=90;
+	player.StatBase[ST_EXPLODE_RESIST]+=25; //-20
+	player.SkillBase[SK_SNEAK]=-250;
+	Critter@ toCr=GetCritter(player.Id);
+	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
+	player.StatBase[ST_STRENGTH]+=3;
+	player.StatBase[ST_ENDURANCE]+=3;
 }
-
-void dlg_TakeMoney( Critter& player, Critter@ terminal, string@ moneyCount )
+//становление вадима/вылет человеком на глобал, удалить всё содержимое
+void r_changeVADIM( Critter& player, Critter@ terminal )
 {
-    if( not IS_DIALOG_SAY_MODE( moneyCount ) )
-        return;
-    if( player.StatBase[ ST_REPLICATION_MONEY ] == 0 )
-        SEND_ERROR_RETURN( player, STR_ZERO_BALANCE );
-    if( player.StatBase[ ST_REPLICATION_MONEY ] < 0 )
-        SEND_ERROR_RETURN( player, STR_NEGATIVE_BALANCE );
-    int money = 0;
-    if( not StrToInt( moneyCount, money ) )
-        SEND_ERROR_RETURN( player, STR_INVALID_MONEY_COUNT );
-    if( money == 0 )
-        SEND_ERROR_RETURN( player, STR_ZERO_MONEY_COUNT );
-    if( money < 0 )
-        SEND_ERROR_RETURN( player, STR_NEGATIVE_MONEY_COUNT );
-    if( money > player.StatBase[ ST_REPLICATION_MONEY ] )
-        SEND_ERROR_RETURN( player, STR_NOT_ENAUGTH_MONEY );
-    player.StatBase[ ST_REPLICATION_MONEY ] -= money;
-    _CritAddItem( player, PID_BOTTLE_CAPS, money );
-    player.SayMsg( SAY_DIALOG, TEXTMSG_TEXT, STR_OPERATION_SUCCESS );
-}
-
-void TransferMoney( Critter@ player, string@ moneyCount, bool forReal )
-{
-    // Get money to transfer.
-    int money = 0;
-    if( not StrToInt( moneyCount, money ) )
-        SEND_ERROR_RETURN( player, STR_INVALID_MONEY_COUNT );
-    if( money == 0 )
-        SEND_ERROR_RETURN( player, STR_ZERO_MONEY_COUNT );
-    if( money < 0 )
-        SEND_ERROR_RETURN( player, STR_NEGATIVE_MONEY_COUNT );
-
-    // Get stored critter.
-    GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
-    if( not valid( var ) )
-        SEND_ERROR_RETURN( player, STR_GENERIC_ERROR );
-    Critter@ cr = GetCritter( var.GetValue() );
-    if( not valid( cr ) )
-        SEND_ERROR_RETURN( player, STR_PLAYER_NOT_FOUND );
-
-    // Transfer money.
-    if( forReal )
-    {
-        if( uint( money ) > _CritCountItem( player, PID_BOTTLE_CAPS ) )
-            SEND_ERROR_RETURN( player, STR_NOT_ENAUGTH_MONEY );
-        _CritDeleteItem( player, PID_BOTTLE_CAPS, money );
-    }
-    else
-    {
-        if( money > player.StatBase[ ST_REPLICATION_MONEY ] )
-            SEND_ERROR_RETURN( player, STR_NOT_ENAUGTH_MONEY );
-        player.StatBase[ ST_REPLICATION_MONEY ] -= money;
-    }
-
-    cr.StatBase[ ST_REPLICATION_MONEY ] += money;
-    player.SayMsg( SAY_DIALOG, TEXTMSG_TEXT, STR_OPERATION_SUCCESS );
+	Item@ armor=player.GetItem(0,SLOT_ARMOR);
+	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
+	player.ChangeCrType(20);
+	player.StatBase[ST_BASE_CRTYPE]=20; 
+	player.StatBase[ST_MAX_LIFE]+=9999; 
+	player.StatBase[ST_NORMAL_ABSORB]+=999; //-7
+	player.StatBase[ST_LASER_ABSORB]+=999; //-7
+	player.StatBase[ST_FIRE_ABSORB]+=999; //-7
+	player.StatBase[ST_PLASMA_ABSORB]+=9999; //-7
+	player.StatBase[ST_ELECTRO_ABSORB]=999;
+	player.StatBase[ST_EMP_ABSORB]+=999;
+	player.StatBase[ST_EXPLODE_ABSORB]+=999; //-6
+	player.StatBase[ST_ARMOR_CLASS]+=999;
+	player.StatBase[ST_RADIATION_RESISTANCE]=999;
+	player.StatBase[ST_NORMAL_RESIST]+=9999; //-30
+	player.StatBase[ST_LASER_RESIST]+=999; //-25
+	player.StatBase[ST_FIRE_RESIST]+=999; //-25
+	player.StatBase[ST_PLASMA_RESIST]+=999; //-25
+	player.StatBase[ST_ELECTRO_RESIST]=999;
+	player.StatBase[ST_EMP_RESIST]+=999;
+	player.StatBase[ST_EXPLODE_RESIST]+=999; //-20
+	player.SkillBase[SK_SNEAK]=999;
+	Critter@ toCr=GetCritter(player.Id);
+	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
+	player.StatBase[ST_STRENGTH]+=10;
+	player.StatBase[ST_PERCEPTION]+=10;
+	player.StatBase[ST_ENDURANCE]+=10;
+	player.StatBase[ST_AGILITY]+=10;
+	player.StatBase[ST_INTELLECT]+=10;
+	player.StatBase[ST_CHARISMA]+=10;
+	player.StatBase[ST_LUCK]+=10;
 }

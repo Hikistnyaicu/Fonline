@@ -230,7 +230,7 @@ int getParam_Strength(Critter&cr,uint)
 	if(cr.ParamBase[(380)]!=0&&getParam_Timeout(cr,(238))!=0&&
 	cr.ParamBase[(72)]<=(cr.ParamBase[(7)]+cr.ParamBase[(0)]+cr.ParamBase[(2)]*2)/2)
 	val++;
-	return(((val)>(10))?(10):(((val)<(1))?(1):(val)));
+	return(((val)>(13))?(13):(((val)<(1))?(1):(val)));
 }
 
 int getParam_Perception(Critter&cr,uint)
@@ -244,7 +244,7 @@ int getParam_Perception(Critter&cr,uint)
 int getParam_Endurance(Critter&cr,uint)
 {
 	int val=cr.ParamBase[(2)]+cr.ParamBase[(34)];
-	return(((val)>(10))?(10):(((val)<(1))?(1):(val)));
+	return(((val)>(13))?(13):(((val)<(1))?(1):(val)));
 }
 
 int getParam_Charisma(Critter&cr,uint)

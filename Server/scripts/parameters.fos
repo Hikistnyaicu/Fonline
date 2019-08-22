@@ -387,7 +387,7 @@ int getParam_Strength( Critter& cr, uint )
     if( cr.ParamBase[ PE_ADRENALINE_RUSH ] != 0 && getParam_Timeout( cr, TO_BATTLE ) != 0 && // Adrenaline rush perk
         cr.ParamBase[ ST_CURRENT_HP ] <= ( cr.ParamBase[ ST_MAX_LIFE ] + cr.ParamBase[ ST_STRENGTH ] + cr.ParamBase[ ST_ENDURANCE ] * 2 ) / 2 )
         val++;
-    return CLAMP( val, 1, 10 );
+    return CLAMP( val, 1, 13 );
 }
 
 int getParam_Perception( Critter& cr, uint )
@@ -401,7 +401,7 @@ int getParam_Perception( Critter& cr, uint )
 int getParam_Endurance( Critter& cr, uint )
 {
     int val = cr.ParamBase[ ST_ENDURANCE ] + cr.ParamBase[ ST_ENDURANCE_EXT ];
-    return CLAMP( val, 1, 10 );
+    return CLAMP( val, 1, 13 );
 }
 
 int getParam_Charisma( Critter& cr, uint )

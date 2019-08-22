@@ -6,7 +6,7 @@ Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<74>, receive<808275>, whole<808349>, receive real<918345>.
+Disconnect. Session traffic: send<10>, receive<442>, whole<452>, receive real<785>.
 Loaded<325> critter types.
 Load scripts...
 Bind reserved functions...
@@ -24,18 +24,10 @@ Hex field initialization complete.
 Engine initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<84>, receive<808716>, whole<808800>, receive real<919130>.
-Connecting to server<localhost:4000>.
-Connection established.
-Player registration...complete.
-Registration success.
-Disconnect. Session traffic: send<314>, receive<808750>, whole<809064>, receive real<919149>.
+Disconnect. Session traffic: send<20>, receive<884>, whole<904>, receive real<1570>.
 Connecting to server<localhost:4000>.
 Connection established.
 Authentication success.
-Change map...
-Get hash of map, pid<260>...complete.
-Get map...260...New: Scenery Old: Tiles Walls. Map saved.
 Change map...
 Get hash of map, pid<260>...complete.
 Load map...Load map success.
@@ -43,5 +35,4 @@ Local map loaded.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Disconnect. Session traffic: send<798>, receive<811797>, whole<812595>, receive real<940772>.
 Exit from game.

@@ -1,0 +1,150 @@
+Application
+	Name        FOnlineServer
+	Version     469
+	OS          6.2.9200 ()
+	Timestamp   2019.08.22 17:40:03
+
+Exception
+	Code      EXCEPTION_ACCESS_VIOLATION
+	Address   0x005F0162
+	Flags     0x0
+	Info      Attempted to read to an 0x1CB7A000
+
+Thread 'GUI' (4920, current)
+	FOnlineServer, Fl_Text_Display::handle_vline + 290, fl_text_display.cxx (1739)
+	FOnlineServer, Fl_Text_Display::draw_vline + 217, fl_text_display.cxx (1890)
+	FOnlineServer, Fl_Text_Display::draw_text + 198, fl_text_display.cxx (466)
+	FOnlineServer, Fl_Text_Display::draw + 2143, fl_text_display.cxx (3441)
+	FOnlineServer, Fl_Group::update_child + 160, fl_group.cxx (756)
+	FOnlineServer, Fl_Group::draw_children + 373, fl_group.cxx (730)
+	FOnlineServer, Fl_Window::draw + 94, fl_window.cxx (139)
+	FOnlineServer, Fl_Window::flush + 70, fl.cxx (1703)
+	FOnlineServer, Fl::flush + 140, fl.cxx (741)
+	FOnlineServer, fl_wait + 836, fl_win32.cxx (424)
+	FOnlineServer, Fl::wait + 23, fl.cxx (454)
+	FOnlineServer, Fl::wait + 33, fl.cxx (598)
+	FOnlineServer, main + 1209, mainserver.cpp (210)
+	FOnlineServer, WinMain + 402, fl_call_main.c (115)
+	FOnlineServer, __tmainCRTStartup + 282, crt0.c (275)
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Thread 'Unknown' (11840)
+	ntdll, NtWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Thread 'Unknown' (6096)
+	ntdll, NtWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Thread 'Unknown' (5116)
+	ntdll, NtWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Thread 'Unknown' (11292)
+	ntdll, NtWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Thread 'Unknown' (10584)
+	ntdll, NtWaitForWorkViaWorkerFactory + 12
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Thread 'Unknown' (1972)
+	ntdll, NtWaitForMultipleObjects + 12
+	combase, CoCreateGuid + 1685
+	combase, CoGetContextToken + 333
+	combase, CoCreateGuid + 1287
+	combase, CoGetStdMarshalEx + 6415
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Thread 'GUIUpdate' (1272)
+	ntdll, ZwDelayExecution + 12
+	KERNELBASE, Sleep + 15
+	FOnlineServer, Thread::Sleep + 13, common.cpp (1634)
+	FOnlineServer, GUIUpdate + 17, mainserver.cpp (525)
+	FOnlineServer, ThreadBeginExecution + 44, common.cpp (1542)
+	FOnlineServer, ptw32_threadStart + 119, ptw32_threadstart.c (225)
+	FOnlineServer, _callthreadstartex + 27, threadex.c (314)
+	FOnlineServer, _threadstartex + 100, threadex.c (292)
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+	???, (function-name not available) + 0
+
+Thread 'WorldSaveManager' (8416)
+	ntdll, NtWaitForSingleObject + 12
+	KERNELBASE, WaitForSingleObject + 18
+	FOnlineServer, FOServer::Dump_Work + 46, server.cpp (4744)
+	FOnlineServer, ThreadBeginExecution + 44, common.cpp (1542)
+	FOnlineServer, ptw32_threadStart + 119, ptw32_threadstart.c (225)
+	FOnlineServer, _callthreadstartex + 27, threadex.c (314)
+	FOnlineServer, _threadstartex + 100, threadex.c (292)
+	KERNEL32, BaseThreadInitThunk + 36
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1081
+	ntdll, RtlSubscribeWnfStateChangeNotification + 1028
+
+Loaded modules
+	D:\Υπενό\Games\Fonline\Server\FOnlineServer.exe (00400000)
+	C:\Windows\SYSTEM32\ntdll.dll (771B0000)
+	C:\Windows\System32\KERNEL32.DLL (75DA0000)
+	C:\Windows\System32\KERNELBASE.dll (76B00000)
+	C:\Windows\System32\USER32.dll (759B0000)
+	C:\Windows\System32\win32u.dll (76AE0000)
+	C:\Windows\System32\GDI32.dll (76A60000)
+	C:\Windows\System32\gdi32full.dll (75E80000)
+	C:\Windows\System32\ADVAPI32.dll (73CB0000)
+	C:\Windows\System32\msvcrt.dll (76990000)
+	C:\Windows\System32\sechost.dll (75960000)
+	C:\Windows\System32\RPCRT4.dll (757B0000)
+	C:\Windows\System32\SspiCli.dll (73C90000)
+	C:\Windows\System32\CRYPTBASE.dll (73C80000)
+	C:\Windows\System32\bcryptPrimitives.dll (75750000)
+	C:\Windows\System32\WS2_32.dll (76890000)
+	C:\Windows\System32\PSAPI.DLL (76CB0000)
+	C:\Windows\SYSTEM32\dbghelp.dll (6E960000)
+	C:\Windows\System32\SHELL32.dll (73E90000)
+	C:\Windows\SYSTEM32\WINMM.dll (73BC0000)
+	C:\Windows\System32\ucrtbase.dll (76CC0000)
+	C:\Windows\System32\cfgmgr32.dll (76150000)
+	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.14393.2457_none_e8ebe5c0ed79850d\COMCTL32.dll (58480000)
+	C:\Windows\System32\windows.storage.dll (76320000)
+	C:\Windows\SYSTEM32\WINMMBASE.dll (08980000)
+	C:\Windows\System32\combase.dll (75400000)
+	C:\Windows\System32\powrprof.dll (76A90000)
+	C:\Windows\System32\shlwapi.dll (756A0000)
+	C:\Windows\System32\kernel.appcore.dll (76190000)
+	C:\Windows\System32\shcore.dll (76900000)
+	C:\Windows\System32\profapi.dll (75270000)
+	C:\Windows\System32\ole32.dll (75BB0000)
+	C:\Windows\SYSTEM32\dbgcore.DLL (51200000)
+	C:\Windows\System32\IMM32.DLL (76120000)
+	C:\Windows\system32\uxtheme.dll (70E50000)
+	C:\Windows\System32\MSCTF.dll (75FE0000)
+	C:\Windows\System32\OLEAUT32.dll (75B10000)
+	C:\Windows\System32\msvcp_win.dll (75890000)
+	C:\Windows\system32\dwmapi.dll (70FB0000)
+	C:\Windows\System32\clbcatq.dll (75610000)
+	C:\Windows\system32\dataexchange.dll (704F0000)
+	C:\Windows\system32\d3d11.dll (702C0000)
+	C:\Windows\system32\dcomp.dll (701A0000)
+	C:\Windows\system32\dxgi.dll (70110000)
+	C:\Windows\system32\twinapi.appcore.dll (70010000)
+	C:\Windows\system32\bcrypt.dll (73BF0000)
+	C:\Windows\system32\msimtf.dll (5E550000)
+	C:\Windows\system32\mswsock.dll (73010000)
+
+AngelScript
+	Not available
