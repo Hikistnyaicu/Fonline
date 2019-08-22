@@ -42,6 +42,8 @@ void r_changeMYT( Critter& player, Critter@ terminal )
 	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
 	player.StatBase[ST_STRENGTH]+=3;
 	player.StatBase[ST_ENDURANCE]+=3;
+	
+	player.TransitToGlobal( true );
 }
 //становление гуля, 401-й тип - таксикс, 500 тип - наш
 void r_changeGul( Critter& player, Critter@ terminal )
@@ -72,6 +74,8 @@ void r_changeGul( Critter& player, Critter@ terminal )
 	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
 	player.StatBase[ST_STRENGTH]+=3;
 	player.StatBase[ST_ENDURANCE]+=3;
+	
+	player.TransitToGlobal( true );
 }
 //становление робота
 void r_changeROBOT( Critter& player, Critter@ terminal )
@@ -102,6 +106,8 @@ void r_changeROBOT( Critter& player, Critter@ terminal )
 	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
 	player.StatBase[ST_STRENGTH]+=3;
 	player.StatBase[ST_ENDURANCE]+=3;
+	
+	player.TransitToGlobal( true );
 }
 //становление когтя-смерти
 void r_changeCLOW( Critter& player, Critter@ terminal )
@@ -132,6 +138,8 @@ void r_changeCLOW( Critter& player, Critter@ terminal )
 	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
 	player.StatBase[ST_STRENGTH]+=3;
 	player.StatBase[ST_ENDURANCE]+=3;
+	
+	player.TransitToGlobal( true );
 }
 //ВАДИМУС, не нужно становиться человеком, т.к. их два типа: м/ж; 
 void r_changeVADIM( Critter& player, Critter@ terminal )
@@ -168,4 +176,6 @@ void r_changeVADIM( Critter& player, Critter@ terminal )
 	player.StatBase[ST_INTELLECT]+=10;
 	player.StatBase[ST_CHARISMA]+=10;
 	player.StatBase[ST_LUCK]+=10;
+	
+	player.TransitToGlobal(true);
 }

@@ -35,6 +35,8 @@ void r_changeMYT(Critter&player,Critter@terminal)
 	GameVar@var=GetLocalVar((3029),player.Id);
 	player.StatBase[(0)]+=3;
 	player.StatBase[(2)]+=3;
+	
+	player.TransitToGlobal(true);
 }
 
 void r_changeGul(Critter&player,Critter@terminal)
@@ -65,6 +67,8 @@ void r_changeGul(Critter&player,Critter@terminal)
 	GameVar@var=GetLocalVar((3029),player.Id);
 	player.StatBase[(0)]+=3;
 	player.StatBase[(2)]+=3;
+	
+	player.TransitToGlobal(true);
 }
 
 void r_changeROBOT(Critter&player,Critter@terminal)
@@ -95,6 +99,8 @@ void r_changeROBOT(Critter&player,Critter@terminal)
 	GameVar@var=GetLocalVar((3029),player.Id);
 	player.StatBase[(0)]+=3;
 	player.StatBase[(2)]+=3;
+	
+	player.TransitToGlobal(true);
 }
 
 void r_changeCLOW(Critter&player,Critter@terminal)
@@ -125,6 +131,8 @@ void r_changeCLOW(Critter&player,Critter@terminal)
 	GameVar@var=GetLocalVar((3029),player.Id);
 	player.StatBase[(0)]+=3;
 	player.StatBase[(2)]+=3;
+	
+	player.TransitToGlobal(true);
 }
 
 void r_changeVADIM(Critter&player,Critter@terminal)
@@ -161,4 +169,6 @@ void r_changeVADIM(Critter&player,Critter@terminal)
 	player.StatBase[(4)]+=10;
 	player.StatBase[(3)]+=10;
 	player.StatBase[(6)]+=10;
+	
+	player.TransitToGlobal(true);
 }
