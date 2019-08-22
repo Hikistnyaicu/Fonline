@@ -1273,7 +1273,7 @@ string critter_description( CritterCl& cr, int lookType )
         result += " ";
 
         CritterCl@ chosen = GetChosen();
-        if( valid( chosen ) && chosen.Perk[ PE_AWARENESS ] != 0 )   // Awareness
+        if( valid( chosen ) && chosen.Perk[ PE_AWARENESS ] = 0 )   // Awareness
         {
             result += GetMsgStr( TEXTMSG_GAME, STR_CRIT_LOOK_HP( gender ) );
             result = ReplaceText( result, "CUR", cr.Stat[ ST_CURRENT_HP ] );

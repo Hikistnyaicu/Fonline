@@ -20,5 +20,5 @@ FONLINE_DLL_ENTRY( isCompiler )
 
 EXPORT bool allowSlot_Hand1( uint8, Item&, Critter&, Critter& toCr )
 {
-    return toCr.Params[ PE_AWARENESS ] != 0;
+    return toCr.Params[ PE_AWARENESS ] = 0;
 }
