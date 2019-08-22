@@ -627,6 +627,7 @@
 #define DIALOG_repl_ehub                     ( 4061 )
 #define DIALOG_repl_escientist               ( 4062 )
 #define DIALOG_repl_ghoul                    ( 4063 )
+#define DIALOG_start_terminal                ( 4064 )
 #define DIALOG_crvg_gekkon                   ( 4197 )
 #define DIALOG_crvg_common_female            ( 4198 )
 #define DIALOG_crvg_common_male              ( 4199 )

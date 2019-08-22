@@ -769,6 +769,7 @@ $   4060    repl_ewarrior
 $   4061    repl_ehub
 $   4062    repl_escientist
 $   4063    repl_ghoul
+$   4064    start_terminal
 $	4197	crvg_gekkon
 $	4198	crvg_common_female
 $	4199	crvg_common_male

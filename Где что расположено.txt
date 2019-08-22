@@ -1,4 +1,11 @@
 Криттеры:
 CritterTypes.cfg
+---
+Диалоги располагаются в папке:
+D:\0_FOnline_NEW_REP\Fonline\Server\dialogs
+Там есть файл с их описью - dialogs.lst
 
+Но есть ещё _dialogs.fos в скриптах, там дефайны
+
+---
 parameters.fos - отвечает за... хз, какие-то статы

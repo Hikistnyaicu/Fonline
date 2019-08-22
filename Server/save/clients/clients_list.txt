@@ -4,3 +4,6 @@ Test.client
 Dniwe.client
 Dniwe2.client
 Dniwe3.client
+Dniwe4.client
+Azaza.client
+Jasda.client
