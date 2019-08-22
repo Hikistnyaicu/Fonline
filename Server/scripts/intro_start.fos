@@ -43,13 +43,13 @@ void r_changeMYT( Critter& player, Critter@ terminal )
 	player.StatBase[ST_STRENGTH]+=3;
 	player.StatBase[ST_ENDURANCE]+=3;
 }
-//становление гуля
+//становление гуля, 401-й тип - таксикс, 500 тип - наш
 void r_changeGul( Critter& player, Critter@ terminal )
 {
 	Item@ armor=player.GetItem(0,SLOT_ARMOR);
 	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
-	player.ChangeCrType(401);
-	player.StatBase[ST_BASE_CRTYPE]=401; 
+	player.ChangeCrType(500);
+	player.StatBase[ST_BASE_CRTYPE]=500; 
 	player.StatBase[ST_MAX_LIFE]+=350; 
 	player.StatBase[ST_NORMAL_ABSORB]+=6; //-7
 	player.StatBase[ST_LASER_ABSORB]+=6; //-7

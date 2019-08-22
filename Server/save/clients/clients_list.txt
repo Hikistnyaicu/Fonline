@@ -23,3 +23,4 @@ hgfhfghfghbcve.client
 Ытка2.client
 Sasman.client
 Saske.client
+Sosaske.client

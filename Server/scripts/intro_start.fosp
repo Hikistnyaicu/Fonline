@@ -41,8 +41,8 @@ void r_changeGul(Critter&player,Critter@terminal)
 {
 	Item@armor=player.GetItem(0,(3));
 	if((@armor!=null))player.MoveItem(armor.Id,0,(0));
-	player.ChangeCrType(401);
-	player.StatBase[(112)]=401;
+	player.ChangeCrType(500);
+	player.StatBase[(112)]=500;
 	player.StatBase[(7)]+=350;
 	player.StatBase[(16)]+=6;
 	player.StatBase[(17)]+=6;

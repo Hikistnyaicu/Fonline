@@ -2,8 +2,8 @@
 Version              5
 MaxHexX              139
 MaxHexY              129
-WorkHexX             69
-WorkHexY             41
+WorkHexX             64
+WorkHexY             46
 ScriptModule         -
 ScriptFunc           -
 NoLogOut             0
@@ -13116,36 +13116,9 @@ Critter_Anim1        0
 Critter_Anim2        0
 
 MapObjType           0
-ProtoId              120
-MapX                 71
-MapY                 44
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
 ProtoId              161
 MapX                 71
-MapY                 47
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              256
-MapX                 71
-MapY                 45
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              257
-MapX                 71
-MapY                 48
+MapY                 44
 Critter_Dir          3
 Critter_Cond         1
 Critter_Anim1        0
@@ -13170,24 +13143,6 @@ Critter_Anim1        0
 Critter_Anim2        0
 
 MapObjType           0
-ProtoId              329
-MapX                 76
-MapY                 43
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              333
-MapX                 76
-MapY                 44
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
 ProtoId              517
 MapX                 71
 MapY                 46
@@ -13206,27 +13161,9 @@ Critter_Anim1        0
 Critter_Anim2        0
 
 MapObjType           0
-ProtoId              484
-MapX                 76
-MapY                 45
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              485
-MapX                 77
-MapY                 46
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
 ProtoId              288
-MapX                 76
-MapY                 47
+MapX                 71
+MapY                 49
 Critter_Dir          3
 Critter_Cond         1
 Critter_Anim1        0
@@ -13260,72 +13197,9 @@ Critter_Anim1        0
 Critter_Anim2        0
 
 MapObjType           0
-ProtoId              104
-MapX                 60
-MapY                 46
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              105
-MapX                 60
-MapY                 47
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              107
-MapX                 60
-MapY                 48
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              108
-MapX                 60
-MapY                 49
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              109
-MapX                 60
-MapY                 50
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
 ProtoId              173
 MapX                 61
 MapY                 44
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              178
-MapX                 61
-MapY                 49
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              179
-MapX                 62
-MapY                 49
 Critter_Dir          3
 Critter_Cond         1
 Critter_Anim1        0
@@ -13336,15 +13210,6 @@ ProtoId              226
 MapX                 61
 MapY                 45
 UID                  1
-Critter_Dir          3
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              227
-MapX                 63
-MapY                 50
 Critter_Dir          3
 Critter_Cond         1
 Critter_Anim1        0
@@ -13393,15 +13258,6 @@ MapX                 64
 MapY                 43
 UID                  2
 Critter_Dir          2
-Critter_Cond         1
-Critter_Anim1        0
-Critter_Anim2        0
-
-MapObjType           0
-ProtoId              529
-MapX                 60
-MapY                 51
-Critter_Dir          3
 Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0
@@ -13746,6 +13602,69 @@ ProtoId              91
 MapX                 79
 MapY                 48
 Critter_Dir          3
+Critter_Cond         1
+Critter_Anim1        0
+Critter_Anim2        0
+
+MapObjType           0
+ProtoId              530
+MapX                 74
+MapY                 52
+Critter_Dir          2
+Critter_Cond         1
+Critter_Anim1        0
+Critter_Anim2        0
+
+MapObjType           0
+ProtoId              531
+MapX                 70
+MapY                 52
+Critter_Dir          2
+Critter_Cond         1
+Critter_Anim1        0
+Critter_Anim2        0
+
+MapObjType           0
+ProtoId              532
+MapX                 72
+MapY                 52
+Critter_Dir          2
+Critter_Cond         1
+Critter_Anim1        0
+Critter_Anim2        0
+
+MapObjType           0
+ProtoId              533
+MapX                 73
+MapY                 53
+Critter_Dir          2
+Critter_Cond         1
+Critter_Anim1        0
+Critter_Anim2        0
+
+MapObjType           0
+ProtoId              534
+MapX                 71
+MapY                 53
+Critter_Dir          2
+Critter_Cond         1
+Critter_Anim1        0
+Critter_Anim2        0
+
+MapObjType           0
+ProtoId              535
+MapX                 68
+MapY                 53
+Critter_Dir          2
+Critter_Cond         1
+Critter_Anim1        0
+Critter_Anim2        0
+
+MapObjType           0
+ProtoId              536
+MapX                 66
+MapY                 53
+Critter_Dir          2
 Critter_Cond         1
 Critter_Anim1        0
 Critter_Anim2        0

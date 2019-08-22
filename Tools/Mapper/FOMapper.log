@@ -12,7 +12,7 @@ Bind reserved function fail, name<map_load>.
 Bind reserved function fail, name<map_save>.
 Bind reserved functions fail.
 Script system initialization complete.
-Loaded<325> critter types.
+Loaded<338> critter types.
 Item manager initialization...
 Item manager initialization complete.
 Loading items prototypes...
@@ -20,18 +20,8 @@ Items prototypes successfully loaded, count<4614>.
 Critter manager initialization...
 Critter manager initialization complete.
 Loading critters prototypes...
-Loaded<529> critter protos, errors<0>.
+Loaded<542> critter protos, errors<0>.
 Hex field initialization...
 Hex field initialization complete.
 Mapper initialization complete.
-Create map from prototype.
-Create map from prototype complete.
-Create map from prototype.
-Create map from prototype complete.
-Create map from prototype.
-Create map from prototype complete.
-Create map from prototype.
-Create map from prototype complete.
-Create map from prototype.
-Create map from prototype complete.
 Exit from mapper.
