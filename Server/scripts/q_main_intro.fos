@@ -75,27 +75,27 @@ bool SetPlayerStartLocation( Critter& player )
         return false;
 
     // Изменение типа криттера, чтобы не было пижамы с рождения
-    #ifndef PLAYERS_3D
-    int crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_JUMPSUIT_M : CRTYPE_DW_JUMPSUIT_F );
-    if( player.Stat[ ST_INTELLECT ] <= TRIBAL_INT )
-        crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_JUMPSUIT_M : CRTYPE_DW_JUMPSUIT_F );
-    player.ChangeCrType( crType );
-    player.StatBase[ ST_BASE_CRTYPE ] = crType;
-    #endif
-    #ifdef PLAYERS_3D
-    if( player.Stat[ ST_INTELLECT ] > TRIBAL_INT )
-    {
+    //#ifndef PLAYERS_3D
+    //int crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_JUMPSUIT_M : CRTYPE_DW_JUMPSUIT_F );
+    //if( player.Stat[ ST_INTELLECT ] <= TRIBAL_INT )
+    //    crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_JUMPSUIT_M : CRTYPE_DW_JUMPSUIT_F );
+    //player.ChangeCrType( crType );
+    //player.StatBase[ ST_BASE_CRTYPE ] = crType;
+    //#endif
+    //#ifdef PLAYERS_3D
+    //if( player.Stat[ ST_INTELLECT ] > TRIBAL_INT )
+    //{
         // Leather jacket set
-        player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_BODY ] = ATTRIBUTE_Body_LeatherOutfit;
-        player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_HANDS ] = ATTRIBUTE_Hands_LeatherOutfit;
-        player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_FEET ] = ATTRIBUTE_Feet_LeatherOutfit;
-    }
-    else
-    {
+        //player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_BODY ] = ATTRIBUTE_Body_LeatherOutfit;
+        //player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_HANDS ] = ATTRIBUTE_Hands_LeatherOutfit;
+        //player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_FEET ] = ATTRIBUTE_Feet_LeatherOutfit;
+    //}
+    //else
+    //{
         // Naked
-        player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_BODY ] = 1000;        // Some unaviable value
-    }
-    #endif
+        //player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_BODY ] = 1000;        // Some unaviable value
+    //}
+    //#endif
 
     DL( "Player successfully transited to start location  LocId=" + locId );
     return true;
@@ -270,19 +270,19 @@ uint e_ReplicateCritter( uint[] @ values )
     if( !valid( player ) )
         return 0;
 
-    #ifndef PLAYERS_3D
-    int crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DEFAULT_M : CRTYPE_DEFAULT_F );
-    player.ChangeCrType( crType );
-    player.StatBase[ ST_BASE_CRTYPE ] = 0;
-    #endif
-    #ifdef PLAYERS_3D
-    player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_BODY ] = 0;
-    player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_HANDS ] = 0;
-    player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_FEET ] = 0;
-    #endif
+    //#ifndef PLAYERS_3D
+    //int crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DEFAULT_M : CRTYPE_DEFAULT_F );
+    //player.ChangeCrType( crType );
+    //player.StatBase[ ST_BASE_CRTYPE ] = 0;
+    //#endif
+    //#ifdef PLAYERS_3D
+    //player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_BODY ] = 0;
+    //player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_HANDS ] = 0;
+    //player.StatBase[ ST_ANIM3D_LAYERS + ANIM3D_LAYER_FEET ] = 0;
+    //#endif
 
-    player.AddHolodiskInfo( HOLODISK_INFO_INTRO );
-    CreateTimeEvent( __FullSecond + REAL_SECOND( 3 ), "e_ShowMessage", player.Id, true );
+    //player.AddHolodiskInfo( HOLODISK_INFO_INTRO );
+    //CreateTimeEvent( __FullSecond + REAL_SECOND( 3 ), "e_ShowMessage", player.Id, true );
     ReplicateCritter( player );
     return 0;
 }

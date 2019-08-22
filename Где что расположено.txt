@@ -1,5 +1,8 @@
 ﻿Криттеры:
-CritterTypes.cfg
+D:\0_FOnline_NEW_REP\Fonline\Server\proto\critters
+Пропись в .fopro
+
+CritterTypes.cfg - тут сшивать их, типы анимация и прописка
 ---
 Диалоги располагаются в папке:
 D:\0_FOnline_NEW_REP\Fonline\Server\dialogs

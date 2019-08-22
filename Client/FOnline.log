@@ -6,7 +6,7 @@ Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<18>, receive<33637>, whole<33655>, receive real<66325>.
+Disconnect. Session traffic: send<10>, receive<440>, whole<450>, receive real<785>.
 Loaded<325> critter types.
 Load scripts...
 Bind reserved functions...
@@ -24,14 +24,63 @@ Hex field initialization complete.
 Engine initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<28>, receive<34077>, whole<34105>, receive real<67110>.
+Disconnect. Session traffic: send<20>, receive<880>, whole<900>, receive real<1570>.
+Connecting to server<localhost:4000>.
+Connection established.
+Player registration...complete.
+Registration success.
+Disconnect. Session traffic: send<262>, receive<914>, whole<1176>, receive real<1589>.
 Connecting to server<localhost:4000>.
 Connection established.
 Authentication success.
 Change map...
-Global map loaded.
+Get hash of map, pid<260>...complete.
+Load map...Load map success.
+Local map loaded.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Disconnect. Session traffic: send<427>, receive<35033>, whole<35460>, receive real<77762>.
+Change map...
+Get hash of map, pid<261>...complete.
+Load map...Load map success.
+Local map loaded.
+Quest...Complete.
+Chosen parameters...complete.
+Quests...Complete.
+Entering to game complete.
+Change map...
+Global map loaded.
+FOClient::Net_OnAllItemsSend - Chosen is not created.
+Change map...
+Get hash of map, pid<261>...complete.
+Chosen parameters...complete.
+Quests...Complete.
+Entering to game complete.
+Get map...261...New: Scenery Old: Tiles Walls. Map saved.
+Change map...
+Get hash of map, pid<261>...complete.
+Load map...Load map success.
+Local map loaded.
+Chosen parameters...complete.
+Quests...Complete.
+Entering to game complete.
+Quest...Complete.
+Chosen parameters...complete.
+Change map...
+Get hash of map, pid<221>...complete.
+Load map...Load map success.
+Local map loaded.
+Chosen parameters...complete.
+Quests...Complete.
+Entering to game complete.
+Change map...
+Global map loaded.
+FOClient::Net_OnAllItemsSend - Chosen is not created.
+Change map...
+Get hash of map, pid<221>...complete.
+Load map...Load map success.
+Local map loaded.
+Chosen parameters...complete.
+Quests...Complete.
+Entering to game complete.
 Exit from game.

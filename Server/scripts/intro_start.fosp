@@ -11,8 +11,8 @@ void r_changeMYT(Critter&player,Critter@terminal)
 {
 	Item@armor=player.GetItem(0,(3));
 	if((@armor!=null))player.MoveItem(armor.Id,0,(0));
-	player.ChangeCrType(20);
-	player.StatBase[(112)]=20;
+	player.ChangeCrType(21);
+	player.StatBase[(112)]=21;
 	player.StatBase[(7)]+=350;
 	player.StatBase[(16)]+=6;
 	player.StatBase[(17)]+=6;
@@ -41,8 +41,8 @@ void r_changeGul(Critter&player,Critter@terminal)
 {
 	Item@armor=player.GetItem(0,(3));
 	if((@armor!=null))player.MoveItem(armor.Id,0,(0));
-	player.ChangeCrType(20);
-	player.StatBase[(112)]=20;
+	player.ChangeCrType(401);
+	player.StatBase[(112)]=401;
 	player.StatBase[(7)]+=350;
 	player.StatBase[(16)]+=6;
 	player.StatBase[(17)]+=6;
@@ -71,8 +71,8 @@ void r_changeROBOT(Critter&player,Critter@terminal)
 {
 	Item@armor=player.GetItem(0,(3));
 	if((@armor!=null))player.MoveItem(armor.Id,0,(0));
-	player.ChangeCrType(20);
-	player.StatBase[(112)]=20;
+	player.ChangeCrType(460);
+	player.StatBase[(112)]=460;
 	player.StatBase[(7)]+=350;
 	player.StatBase[(16)]+=6;
 	player.StatBase[(17)]+=6;
@@ -101,8 +101,8 @@ void r_changeCLOW(Critter&player,Critter@terminal)
 {
 	Item@armor=player.GetItem(0,(3));
 	if((@armor!=null))player.MoveItem(armor.Id,0,(0));
-	player.ChangeCrType(20);
-	player.StatBase[(112)]=20;
+	player.ChangeCrType(60);
+	player.StatBase[(112)]=60;
 	player.StatBase[(7)]+=350;
 	player.StatBase[(16)]+=6;
 	player.StatBase[(17)]+=6;
@@ -131,8 +131,8 @@ void r_changeVADIM(Critter&player,Critter@terminal)
 {
 	Item@armor=player.GetItem(0,(3));
 	if((@armor!=null))player.MoveItem(armor.Id,0,(0));
-	player.ChangeCrType(20);
-	player.StatBase[(112)]=20;
+	player.ChangeCrType(85);
+	player.StatBase[(112)]=85;
 	player.StatBase[(7)]+=9999;
 	player.StatBase[(16)]+=999;
 	player.StatBase[(17)]+=999;

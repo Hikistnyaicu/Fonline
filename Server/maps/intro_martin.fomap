@@ -2,8 +2,8 @@
 Version              5
 MaxHexX              125
 MaxHexY              135
-WorkHexX             58
-WorkHexY             47
+WorkHexX             55
+WorkHexY             51
 ScriptModule         -
 ScriptFunc           -
 NoLogOut             0
@@ -3582,15 +3582,6 @@ ProtoId              5622
 MapX                 62
 MapY                 57
 
-MapObjType           1
-ProtoId              3531
-MapX                 62
-MapY                 73
-Item_LockerDoorId    1
-Item_LockerComplexity 300
-Item_Val1            1
-Item_Val2            19660800
-
 MapObjType           2
 ProtoId              5879
 MapX                 63
@@ -6376,5 +6367,125 @@ LightIntensity       100
 ScriptName           intro_start
 FuncName             s_Terminal
 Scenery_CanUse       1
+
+MapObjType           2
+ProtoId              4035
+MapX                 61
+MapY                 75
+
+MapObjType           2
+ProtoId              4035
+MapX                 61
+MapY                 77
+
+MapObjType           2
+ProtoId              5622
+MapX                 64
+MapY                 74
+
+MapObjType           2
+ProtoId              5622
+MapX                 64
+MapY                 75
+
+MapObjType           2
+ProtoId              5622
+MapX                 64
+MapY                 76
+
+MapObjType           2
+ProtoId              5622
+MapX                 64
+MapY                 77
+
+MapObjType           2
+ProtoId              5622
+MapX                 63
+MapY                 78
+
+MapObjType           2
+ProtoId              5622
+MapX                 62
+MapY                 77
+
+MapObjType           2
+ProtoId              5622
+MapX                 61
+MapY                 78
+
+MapObjType           2
+ProtoId              5622
+MapX                 60
+MapY                 77
+
+MapObjType           2
+ProtoId              5622
+MapX                 60
+MapY                 76
+
+MapObjType           2
+ProtoId              5622
+MapX                 60
+MapY                 75
+
+MapObjType           2
+ProtoId              5622
+MapX                 60
+MapY                 74
+
+MapObjType           2
+ProtoId              2049
+MapX                 62
+MapY                 73
+
+MapObjType           2
+ProtoId              2049
+MapX                 63
+MapY                 75
+
+MapObjType           2
+ProtoId              2049
+MapX                 63
+MapY                 74
+
+MapObjType           2
+ProtoId              2049
+MapX                 62
+MapY                 74
+
+MapObjType           2
+ProtoId              2049
+MapX                 61
+MapY                 75
+
+MapObjType           2
+ProtoId              2049
+MapX                 62
+MapY                 75
+
+MapObjType           2
+ProtoId              2049
+MapX                 61
+MapY                 76
+
+MapObjType           2
+ProtoId              2049
+MapX                 61
+MapY                 77
+
+MapObjType           2
+ProtoId              2049
+MapX                 63
+MapY                 77
+
+MapObjType           2
+ProtoId              2049
+MapX                 63
+MapY                 76
+
+MapObjType           2
+ProtoId              2049
+MapX                 62
+MapY                 76
 
 

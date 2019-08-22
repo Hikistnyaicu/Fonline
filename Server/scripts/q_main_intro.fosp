@@ -217,13 +217,7 @@ bool SetPlayerStartLocation(Critter&player)
 	if(!(@map!=null))
 	return false;
 	if(!player.TransitToMap(map.Id,(Random(0,1)==0?(0):(240))))
-	return false;  
-	
-	int crType=(player.Stat[(71)]==(0)?(11):(4));
-	if(player.Stat[(4)]<=(3))
-	crType=(player.Stat[(71)]==(0)?(11):(4));
-	player.ChangeCrType(crType);
-	player.StatBase[(112)]=crType;               
+	return false;                       
 	
 	;
 	return true;
@@ -387,14 +381,8 @@ uint e_ReplicateCritter(uint[]@values)
 {
 	Critter@player=GetCritter(values[0]);
 	if(!(@player!=null))
-	return 0; 
+	return 0;             
 	
-	int crType=(player.Stat[(71)]==(0)?((11)):((4)));
-	player.ChangeCrType(crType);
-	player.StatBase[(112)]=0;      
-	
-	player.AddHolodiskInfo((43));
-	CreateTimeEvent(__FullSecond+((3)*__TimeMultiplier),"e_ShowMessage",player.Id,true);
 	ReplicateCritter(player);
 	return 0;
 }
