@@ -5,4 +5,21 @@ Sprite manager initialization complete.
 Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
-Can't connect to game server, error<WSAECONNREFUSED, 10061, No connection could be made because the target machine actively refused it.>.
+Connection established.
+Disconnect. Session traffic: send<74>, receive<807958>, whole<808032>, receive real<918345>.
+Loaded<325> critter types.
+Load scripts...
+Bind reserved functions...
+Bind reserved functions complete.
+Load scripts complete.
+3d rendering is disabled.
+Interface initialization...
+Signature<IntMess> not found.
+Signature<IntMessLarge> not found.
+Interface initialization complete.
+Item manager initialization...
+Item manager initialization complete.
+Hex field initialization...
+Hex field initialization complete.
+Engine initialization complete.
+Exit from game.

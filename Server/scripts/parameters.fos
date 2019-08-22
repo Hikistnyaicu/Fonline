@@ -54,14 +54,14 @@ void changedParam_Experience( Critter& cr, uint, int oldValue )
                     cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] += 5;                                                      // Skilled trait
                 // if(cr.Trait[TRAIT_GIFTED]!=0) cr.StatBase[ST_UNSPENT_SKILL_POINTS]-=5; // Gifted trait
                 cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] += cr.Perk[ PE_EDUCATED ] * 2;                                 // Educated perk
-                if( cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] > 99 )
-                    cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] = 99;                                                      // Clamp skill points
+                if( cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] > 999 )
+                    cr.StatBase[ ST_UNSPENT_SKILL_POINTS ] = 999;                                                      // Clamp skill points
                 if( __MaxLifeLevelSoftCap == 0 || uint( cr.Stat[ ST_LEVEL ] ) <= __MaxLifeLevelSoftCap )
-                    cr.StatBase[ ST_MAX_LIFE ] += 2 + cr.StatBase[ ST_ENDURANCE ] / 2 + cr.Perk[ PE_LIFEGIVER ] * 4;  // Add max hp
+                    cr.StatBase[ ST_MAX_LIFE ] += 2;  // Add max hp
 
                 if( ( level % perkUp ) == 0 )
                 {
-                    cr.StatBase[ ST_UNSPENT_PERKS ] = 1;
+                    cr.StatBase[ ST_UNSPENT_PERKS ] = 10;
                 }
             }
             else
@@ -267,7 +267,7 @@ void CritterGenerate( int[]& params ) // Export to client_main@player_data_gener
     #ifdef __CLIENT
     // Runtime calculations, only for client registration
     _param_[ ST_ARMOR_CLASS ] += _param_[ ST_AGILITY ];
-    _param_[ ST_MAX_LIFE ] += _param_[ ST_STRENGTH ] + _param_[ ST_ENDURANCE ] * 2;
+    _param_[ ST_MAX_LIFE ] += _param_[ ST_STRENGTH ] + _param_[ ST_ENDURANCE ] * 20;
     _param_[ ST_ACTION_POINTS ] += _param_[ ST_AGILITY ] / 2;
     _param_[ ST_CARRY_WEIGHT ] += LBS_TO_GRAMM( 25 + _param_[ ST_STRENGTH ] * ( 25 - _param_[ TRAIT_SMALL_FRAME ] * 10 ) );
     _param_[ ST_MELEE_DAMAGE ] += ( _param_[ ST_STRENGTH ] > 6 ? _param_[ ST_STRENGTH ] - 5 : 1 );

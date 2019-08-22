@@ -442,8 +442,8 @@ void ReplicateCritter(Critter&cr)
 			if(not dieMapIsHell)
 			{
 				cr.StatBase[(82)]-=cr.Stat[(85)];
-				cr.AddItem((117),1);
-				if(cr.Stat[(82)]>=100)
+				cr.AddItem((81),1);
+				if(cr.Stat[(82)]>=0)
 				cr.AddItem((100),1);
 			}
 			cr.StatBase[(83)]++;

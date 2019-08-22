@@ -42,14 +42,14 @@ void changedParam_Experience(Critter&cr,uint,int oldValue)
 				cr.StatBase[(78)]+=5;
 				
 				cr.StatBase[(78)]+=cr.Perk[(319)]*2;
-				if(cr.StatBase[(78)]>99)
-				cr.StatBase[(78)]=99;
+				if(cr.StatBase[(78)]>999)
+				cr.StatBase[(78)]=999;
 				if(__MaxLifeLevelSoftCap==0||uint(cr.Stat[(77)])<=__MaxLifeLevelSoftCap)
-				cr.StatBase[(7)]+=2+cr.StatBase[(2)]/2+cr.Perk[(329)]*4;
+				cr.StatBase[(7)]+=2;
 				
 				if((level%perkUp)==0)
 				{
-					cr.StatBase[(79)]=1;
+					cr.StatBase[(79)]=10;
 				}
 			}
 			else

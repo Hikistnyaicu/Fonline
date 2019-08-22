@@ -892,7 +892,7 @@ void critter_init(Critter&cr,bool firstTime)
 			for(uint i=(0);i<=(6);i++)
 			cr.StatBase[i]=(((cr.StatBase[i])>(10))?(10):(((cr.StatBase[i])<(1))?(1):(cr.StatBase[i])));
 			
-			cr.StatBase[(85)]=100;
+			cr.StatBase[(85)]=0;
 			cr.StatBase[(82)]=0;
 			cr.StatBase[(83)]=0;
 			cr.StatBase[(106)]=1;
@@ -1265,7 +1265,7 @@ void player_levelup(Critter&player,uint skillIndex,uint skillUp,uint perkIndex)
 		}
 	}
 	
-	player.StatBase[(85)]=player.Stat[(77)]*100;
+	player.StatBase[(85)]=0;
 }   
 
 void turn_based_begin(Map&map)
