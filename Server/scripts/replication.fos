@@ -288,8 +288,8 @@ void ReplicateCritter( Critter& cr ) // Export
             if( not dieMapIsHell )
             {
                 cr.StatBase[ ST_REPLICATION_MONEY ] -= cr.Stat[ ST_REPLICATION_COST ];
-                _CritAddItem( cr, PID_FLOWER, 1 );
-                if( cr.Stat[ ST_REPLICATION_MONEY ] >= 100 )
+                _CritAddItem( cr, PID_IGUANA_ON_A_STICK, 1 );
+                if( cr.Stat[ ST_REPLICATION_MONEY ] >= 0 )
                     _CritAddItem( cr, PID_RADIO, 1 );                                                // Add radio
             }
             cr.StatBase[ ST_REPLICATION_COUNT ]++;

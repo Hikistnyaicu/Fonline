@@ -219,9 +219,9 @@ bool SetPlayerStartLocation(Critter&player)
 	if(!player.TransitToMap(map.Id,(Random(0,1)==0?(0):(240))))
 	return false;  
 	
-	int crType=(player.Stat[(71)]==(0)?(13):(6));
+	int crType=(player.Stat[(71)]==(0)?(11):(4));
 	if(player.Stat[(4)]<=(3))
-	crType=(player.Stat[(71)]==(0)?(64):(63));
+	crType=(player.Stat[(71)]==(0)?(11):(4));
 	player.ChangeCrType(crType);
 	player.StatBase[(112)]=crType;               
 	

@@ -76,9 +76,9 @@ bool SetPlayerStartLocation( Critter& player )
 
     // Изменение типа криттера, чтобы не было пижамы с рождения
     #ifndef PLAYERS_3D
-    int crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_LEATHER_JACKET_M : CRTYPE_DW_LEATHER_JACKET_F );
+    int crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_JUMPSUIT_M : CRTYPE_DW_JUMPSUIT_F );
     if( player.Stat[ ST_INTELLECT ] <= TRIBAL_INT )
-        crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_TRIBAL_M : CRTYPE_DW_TRIBAL_F );
+        crType = ( player.Stat[ ST_GENDER ] == GENDER_MALE ? CRTYPE_DW_JUMPSUIT_M : CRTYPE_DW_JUMPSUIT_F );
     player.ChangeCrType( crType );
     player.StatBase[ ST_BASE_CRTYPE ] = crType;
     #endif
