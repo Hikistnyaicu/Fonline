@@ -10,3 +10,7 @@ Server/dumps/*
 Server/save/clients/*
 Tools/*
 *.glslb
+Client/data/cache/default.cache
+Client/FOnline.log
+Server/save/clients/clients_list.txt
+Server/save/clients/last_id.txt
