@@ -4,21 +4,12 @@ FileManager::LoadDataFile - Load data<.\data\packs\Olympsum_mp1.zip> fail.
 Starting FOnline (version 469)...
 Engine initialization...
 Sprite manager initialization...
-GraphicLoader::LoadEffect - Failed to link binary shader program<2D_Default.glslb>, effect<2D_Default.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<2D_WithoutEgg.glslb>, effect<2D_WithoutEgg.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<Interface_Default.glslb>, effect<Interface_Default.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<Primitive_Default.glslb>, effect<Primitive_Default.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<Font_Default.glslb>, effect<Font_Default.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<Contour_Default.glslb>, effect<Contour_Default.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<Flush_RenderTarget.glslb>, effect<Flush_RenderTarget.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<Flush_Primitive.glslb>, effect<Flush_Primitive.glsl>.
-GraphicLoader::LoadEffect - Failed to link binary shader program<Flush_Map.glslb>, effect<Flush_Map.glsl>.
 Sprite manager initialization complete.
 Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<90>, receive<829762>, whole<829852>, receive real<1049425>.
+Disconnect. Session traffic: send<78>, receive<1019837>, whole<1019915>, receive real<1049425>.
 Loaded<344> critter types.
 Load scripts...
 Bind reserved functions...
@@ -36,7 +27,7 @@ Hex field initialization complete.
 Engine initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<100>, receive<830205>, whole<830305>, receive real<1050210>.
+Disconnect. Session traffic: send<88>, receive<1020277>, whole<1020365>, receive real<1050210>.
 Connecting to server<localhost:4000>.
 Connection established.
 Authentication success.
@@ -53,31 +44,17 @@ FOClient::Net_OnAllItemsSend - Chosen is not created.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Change map...
-Get hash of map, pid<332>...Load map<map332> from cache fail.
-Get map...332...New: Tiles Walls Scenery Old:. Map saved.
-Change map...
-Get hash of map, pid<332>...complete.
-Load map...Load map success.
-Local map loaded.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
+Disconnect. Session traffic: send<631>, receive<1022850>, whole<1023481>, receive real<1064250>.
+Connecting to server<localhost:4000>.
+Connection established.
+Disconnect. Session traffic: send<641>, receive<1023290>, whole<1023931>, receive real<1065035>.
+Connecting to server<localhost:4000>.
+Connection established.
+Authentication success.
 Change map...
 Global map loaded.
-FOClient::Net_OnAllItemsSend - Chosen is not created.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Change map...
-Get hash of map, pid<9>...Load map<map9> from cache fail.
-Get map...9...New: Tiles Walls Scenery Old:. Map saved.
-Change map...
-Get hash of map, pid<9>...complete.
-Load map...Load map success.
-Local map loaded.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Disconnect. Session traffic: send<2236>, receive<920322>, whole<922558>, receive real<1527913>.
+Disconnect. Session traffic: send<1036>, receive<1024001>, whole<1025037>, receive real<1072179>.
 Exit from game.

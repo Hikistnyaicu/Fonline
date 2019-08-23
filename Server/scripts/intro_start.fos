@@ -9,13 +9,12 @@ bool s_Terminal( Critter& player, Scenery& terminal, int skill, Item@ item )
     return true;
 }
 //давай не заниматься плохой практикой удалим ЕГО и изменим переменные на нормальные англ.слова
-//так же все другие расы сейчас копии мутанта, нужно продумать статы и найти клитеры
-//так же сейчас затыкивать можно хоть до смерти, надо команду выкидывания на глобал.
-//ЕГО заменим на вариант остаться человеком и улететь в глобал
+//так же все другие расы сейчас копии мутанта, нужно продумать статы
 
 //становление мутанта
 void r_changeMYT( Critter& player, Critter@ terminal )
 {
+	if(player.Stat[ ST_BASE_CRTYPE ] == 0){
 	Item@ armor=player.GetItem(0,SLOT_ARMOR);
 	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
 	player.ChangeCrType(21);
@@ -44,10 +43,12 @@ void r_changeMYT( Critter& player, Critter@ terminal )
 	player.StatBase[ST_ENDURANCE]+=3;
 	
 	player.TransitToGlobal( true );
+	}
 }
 //становление гуля, 401-й тип - таксикс, 500 тип - наш
 void r_changeGul( Critter& player, Critter@ terminal )
 {
+	if(player.Stat[ ST_BASE_CRTYPE ] == 0){
 	Item@ armor=player.GetItem(0,SLOT_ARMOR);
 	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
 	player.ChangeCrType(500);
@@ -76,10 +77,12 @@ void r_changeGul( Critter& player, Critter@ terminal )
 	player.StatBase[ST_ENDURANCE]+=3;
 	
 	player.TransitToGlobal( true );
+	}
 }
 //становление робота
 void r_changeROBOT( Critter& player, Critter@ terminal )
 {
+	if(player.Stat[ ST_BASE_CRTYPE ] == 0){
 	Item@ armor=player.GetItem(0,SLOT_ARMOR);
 	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
 	player.ChangeCrType(460);
@@ -108,10 +111,12 @@ void r_changeROBOT( Critter& player, Critter@ terminal )
 	player.StatBase[ST_ENDURANCE]+=3;
 	
 	player.TransitToGlobal( true );
+	}
 }
 //становление когтя-смерти
 void r_changeCLOW( Critter& player, Critter@ terminal )
 {
+	if(player.Stat[ ST_BASE_CRTYPE ] == 0){
 	Item@ armor=player.GetItem(0,SLOT_ARMOR);
 	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
 	player.ChangeCrType(60);
@@ -140,42 +145,10 @@ void r_changeCLOW( Critter& player, Critter@ terminal )
 	player.StatBase[ST_ENDURANCE]+=3;
 	
 	player.TransitToGlobal( true );
+	}
 }
-//ВАДИМУС, не нужно становиться человеком, т.к. их два типа: м/ж; 
-void r_changeVADIM( Critter& player, Critter@ terminal )
+
+void r_notchange( Critter& player, Critter@ terminal )
 {
-	Item@ armor=player.GetItem(0,SLOT_ARMOR);
-	if(valid(armor)) player.MoveItem(armor.Id,0,SLOT_INV);
-	player.ChangeCrType(85);
-	player.StatBase[ST_BASE_CRTYPE]=85; 
-	player.StatBase[ST_MAX_LIFE]+=9999; 
-	player.StatBase[ST_NORMAL_ABSORB]+=999; //-7
-	player.StatBase[ST_LASER_ABSORB]+=999; //-7
-	player.StatBase[ST_FIRE_ABSORB]+=999; //-7
-	player.StatBase[ST_PLASMA_ABSORB]+=9999; //-7
-	player.StatBase[ST_ELECTRO_ABSORB]=999;
-	player.StatBase[ST_EMP_ABSORB]+=999;
-	player.StatBase[ST_EXPLODE_ABSORB]+=999; //-6
-	player.StatBase[ST_ARMOR_CLASS]+=999;
-	player.StatBase[ST_RADIATION_RESISTANCE]=999;
-	player.StatBase[ST_NORMAL_RESIST]+=9999; //-30
-	player.StatBase[ST_LASER_RESIST]+=999; //-25
-	player.StatBase[ST_FIRE_RESIST]+=999; //-25
-	player.StatBase[ST_PLASMA_RESIST]+=999; //-25
-	player.StatBase[ST_ELECTRO_RESIST]=999;
-	player.StatBase[ST_EMP_RESIST]+=999;
-	player.StatBase[ST_EXPLODE_RESIST]+=999; //-20
-	player.SkillBase[SK_SNEAK]=999;
-	player.StatBase[ST_MELEE_DAMAGE]=999;
-	Critter@ toCr=GetCritter(player.Id);
-	GameVar@ var = GetLocalVar( LVAR_terminal_player_id, player.Id );
-	player.StatBase[ST_STRENGTH]+=10;
-	player.StatBase[ST_PERCEPTION]+=10;
-	player.StatBase[ST_ENDURANCE]+=10;
-	player.StatBase[ST_AGILITY]+=10;
-	player.StatBase[ST_INTELLECT]+=10;
-	player.StatBase[ST_CHARISMA]+=10;
-	player.StatBase[ST_LUCK]+=10;
-	
 	player.TransitToGlobal(true);
 }
