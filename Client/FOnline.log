@@ -9,7 +9,7 @@ Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<74>, receive<809007>, whole<809081>, receive real<918345>.
+Disconnect. Session traffic: send<74>, receive<808457>, whole<808531>, receive real<918345>.
 Loaded<344> critter types.
 Load scripts...
 Bind reserved functions...
@@ -27,7 +27,7 @@ Hex field initialization complete.
 Engine initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<84>, receive<809451>, whole<809535>, receive real<919130>.
+Disconnect. Session traffic: send<84>, receive<808897>, whole<808981>, receive real<919130>.
 Connecting to server<localhost:4000>.
 Connection established.
 Authentication success.
@@ -39,13 +39,7 @@ Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
 Change map...
-Global map loaded.
-FOClient::Net_OnAllItemsSend - Chosen is not created.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Change map...
-Get hash of map, pid<304>...complete.
+Get hash of map, pid<221>...complete.
 Load map...Load map success.
 Local map loaded.
 Chosen parameters...complete.
@@ -57,5 +51,16 @@ FOClient::Net_OnAllItemsSend - Chosen is not created.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Disconnect. Session traffic: send<1002>, receive<813919>, whole<814921>, receive real<945257>.
+Change map...
+Get hash of map, pid<24>...Load map<map24> from cache fail.
+Get map...24...New: Tiles Walls Scenery Old:. Map saved.
+Change map...
+Get hash of map, pid<24>...complete.
+Load map...Load map success.
+Local map loaded.
+Chosen parameters...complete.
+Quests...Complete.
+Entering to game complete.
+FOClient::NetInput - Socket error while receive from server, error<WSAECONNRESET, 10054, An existing connection was forcibly closed by the remote host.>.
+Disconnect. Session traffic: send<1978>, receive<857762>, whole<859740>, receive real<1184503>.
 Exit from game.

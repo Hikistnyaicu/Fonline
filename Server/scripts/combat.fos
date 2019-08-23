@@ -1903,7 +1903,7 @@ void ApplyDamage( AttackStruct& attack, Critter& target, uint rounds, bool isCri
     }
 	
 	//EXPERIENCE SYSTEM	
-  
+/*  
   if(target.IsNpc())
   {
 	int locProtoId=target.GetMap().GetLocation().GetProtoId();
@@ -1933,7 +1933,7 @@ void ApplyDamage( AttackStruct& attack, Critter& target, uint rounds, bool isCri
 			}
 	}
   }
-	
+*/	
 }
 
 void CommenceExplosion( AttackStruct& attack, Map@ map, uint16 tx, uint16 ty, Critter@ target, uint weapPid, uint ammoPid, bool isCritical, uint intentionallyId, bool isRocket, CombatRes[]& results )

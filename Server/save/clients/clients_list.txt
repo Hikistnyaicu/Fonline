@@ -30,3 +30,4 @@ dsfadsf.client
 sssfaf.client
 gfgdf.client
 Dante.client
+Dantes.client
