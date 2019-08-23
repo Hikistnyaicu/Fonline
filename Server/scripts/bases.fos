@@ -1,0 +1,198 @@
+﻿#include "_macros.fos"
+
+void _CaseUse(Item& item, bool firstTime)
+{
+	item.SetEvent(ITEM_EVENT_USE ,"_ToolInit");  /// register use event
+}
+
+bool _ToolInit(Item& item, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery)
+{
+	if(valid(onItem)||valid(onCritter)||valid(onScenery)) return false;
+	Map@ map = cr.GetMap();
+	if(valid(map)) return false;
+	Critter@[] critters;
+	critters.insertLast(cr);
+	cr.GetFollowGroup(FIND_LIFE, critters );
+	uint locId=CreateLocation(282,cr.WorldX,cr.WorldY,critters);
+	_CritDeleteItem(cr, 913, 1);
+	GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	Lider = cr.Id;
+	for(uint i=0,j=critters.length();i<j;i++)
+		{
+			critters[i].SetKnownLoc(true, uint16(locId));
+			Critter@ cri = critters[i];
+			GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, cri.Id);
+			LocBaseId = locId;
+		}
+	return true;
+}
+
+void r_Case1(Critter & cr, Critter@ npc)
+{
+Item@ Case = cr.AddItem(914,1);
+	if(valid(Case))
+	{
+		Case.SetScript("_CaseUse1");
+	}
+}
+
+void r_Case2(Critter & cr, Critter@ npc)
+{
+Item@ Case = cr.AddItem(915,1);
+}
+
+void r_Case3(Critter & cr, Critter@ npc)
+{
+Item@ Case = cr.AddItem(11807,1);
+}
+
+void r_Case4(Critter & cr, Critter@ npc)
+{
+Item@ Case = cr.AddItem(913,1);
+}
+
+void _CaseUse1(Item& item, bool firstTime)
+{
+	item.SetEvent(ITEM_EVENT_USE ,"_ToolInit1");  /// register use event
+}
+
+void _CaseUse3(Item& item, bool firstTime)
+{
+	item.SetEvent(ITEM_EVENT_USE ,"_ToolInit3");  /// register use event
+}
+
+bool _ToolInit1(Item& item, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery)
+{
+	if(valid(onItem)||valid(onCritter)||valid(onScenery)) return false;
+	Map@ map = cr.GetMap();
+	if(valid(map)) return false;
+	Critter@[] critters;
+	critters.insertLast(cr);
+	cr.GetFollowGroup(FIND_LIFE, critters );
+	uint locId=CreateLocation(283,cr.WorldX,cr.WorldY,critters);
+	_CritDeleteItem(cr, 914, 1);
+	GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	Lider = cr.Id;
+	for(uint i=0,j=critters.length();i<j;i++)
+		{
+			critters[i].SetKnownLoc(true, uint16(locId));
+			Critter@ cri = critters[i];
+			GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, cri.Id);
+			LocBaseId = locId;
+		}
+	return true;
+}
+
+bool _ToolInit3(Item& item, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery)
+{
+	if(valid(onItem)||valid(onCritter)||valid(onScenery)) return false;
+	Map@ map = cr.GetMap();
+	if(valid(map)) return false;
+	Critter@[] critters;
+	critters.insertLast(cr);
+	cr.GetFollowGroup(FIND_LIFE, critters );
+	uint locId=CreateLocation(361,cr.WorldX,cr.WorldY,critters);
+	cr.Say(SAY_NETMSG,"LocId = " + locId + ", Coords = " + cr.WorldX + " " + cr.WorldY);
+	_CritDeleteItem(cr, 11807, 1);
+	GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	Lider = cr.Id;
+	for(uint i=0,j=critters.length();i<j;i++)
+		{
+			critters[i].SetKnownLoc(true, uint16(locId));
+			Critter@ cri = critters[i];
+			GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, cri.Id);
+			LocBaseId = locId;
+		}
+	return true;
+}
+
+void _CaseUse2(Item& item, bool firstTime)
+{
+	item.SetEvent(ITEM_EVENT_USE ,"_ToolInit2");  /// register use event
+}
+
+bool _ToolInit2(Item& item, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery)
+{
+	if(valid(onItem)||valid(onCritter)||valid(onScenery)) return false;
+	Map@ map = cr.GetMap();
+	if(valid(map)) return false;
+	Critter@[] critters;
+	critters.insertLast(cr);
+	cr.GetFollowGroup(FIND_LIFE, critters );
+	uint locId=CreateLocation(284,cr.WorldX,cr.WorldY,critters);
+	_CritDeleteItem(cr, 915, 1);
+	GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	Lider = cr.Id;
+	for(uint i=0,j=critters.length();i<j;i++)
+		{
+			critters[i].SetKnownLoc(true, uint16(locId));
+			Critter@ cri = critters[i];
+			GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, cri.Id);
+			LocBaseId = locId;
+		}
+	return true;
+}
+
+void r_Case10(Critter & cr, Critter@ npc)
+{
+Item@ Case = cr.AddItem(27666,1);
+}
+
+void _CaseUse10(Item& item, bool firstTime)
+{
+    item.SetEvent(ITEM_EVENT_USE ,"_ToolInit10");  /// register use event
+}
+
+bool _ToolInit10(Item& item, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery)
+{
+    if(valid(onItem)||valid(onCritter)||valid(onScenery)) return false;
+    Map@ map = cr.GetMap();
+    if(valid(map)) return false;
+    Critter@[] critters;
+    critters.insertLast(cr);
+    cr.GetFollowGroup(FIND_LIFE, critters );
+    uint locId=CreateLocation(376,cr.WorldX,cr.WorldY,critters);
+    _CritDeleteItem(cr, 27666, 1);
+    GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+    Lider = cr.Id;
+    for(uint i=0,j=critters.length();i<j;i++)
+        {
+            critters[i].SetKnownLoc(true, uint16(locId));
+            Critter@ cri = critters[i];
+            GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, cri.Id);
+            LocBaseId = locId;
+        }
+    return true;
+}
+
+void r_Case11(Critter & cr, Critter@ npc)
+{
+Item@ Case = cr.AddItem(27665,1);
+}
+
+void _CaseUse11(Item& item, bool firstTime)
+{
+    item.SetEvent(ITEM_EVENT_USE ,"_ToolInit11");  /// register use event
+}
+
+bool _ToolInit11(Item& item, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery)
+{
+    if(valid(onItem)||valid(onCritter)||valid(onScenery)) return false;
+    Map@ map = cr.GetMap();
+    if(valid(map)) return false;
+    Critter@[] critters;
+    critters.insertLast(cr);
+    cr.GetFollowGroup(FIND_LIFE, critters );
+    uint locId=CreateLocation(377,cr.WorldX,cr.WorldY,critters);
+    _CritDeleteItem(cr, 27665, 1);
+    GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+    Lider = cr.Id;
+    for(uint i=0,j=critters.length();i<j;i++)
+        {
+            critters[i].SetKnownLoc(true, uint16(locId));
+            Critter@ cri = critters[i];
+            GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, cri.Id);
+            LocBaseId = locId;
+        }
+    return true;
+}

@@ -1,0 +1,148 @@
+﻿#include "_macros.fos"
+
+bool s_Terminal(Critter& player, Scenery& terminal, int skill, Item@ item)
+{
+	if(player.IsPlayer() && skill==-1 && not valid(item))  RunDialog(player,41000,terminal.HexX,terminal.HexY,false);
+	return true;
+}
+
+bool s_Terminal1(Critter& player, Scenery& terminal, int skill, Item@ item)
+{
+	if(player.IsPlayer() && skill==-1 && not valid(item))  RunDialog(player,41000,terminal.HexX,terminal.HexY,false);
+	return true;
+}
+
+void AddLoc(Critter& player, int param0, int param1, int param2)
+{
+	Critter@[] critters;
+	critters.insertLast(player);
+	player.GetFollowGroup(FIND_LIFE, critters );
+	uint locId=CreateLocation(param0,param1,param2,critters);
+	GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	Lider = player.Id;
+	for(uint i=0,j=critters.length();i<j;i++)
+		{
+			critters[i].SetKnownLoc(true, uint16(locId));
+			Critter@ cr = critters[i];
+		//	GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, cr.Id);
+		//	LocBaseId = locId;
+			
+		}
+}
+
+uint dlg_ChoosePlayer1(Critter& player, Critter@ terminal, string@ playerName)
+{
+	 uint locId=GetLocId(player);
+	 GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	 Critter@ cr=GetPlayer(playerName);
+	if (valid (cr)&& Lider == player.Id)
+	{
+		
+	cr.SetKnownLoc(true, (locId));
+	return 5;
+	}
+	else {
+	return 6;}
+}
+/*
+uint dlg_ChoosePlayer(Critter& player, Critter@ terminal, string@ playerName)
+{
+	 GameVar@ LocBaseId = GetLocalVar(LVAR_baseId, player.Id);
+	 uint locId=LocBaseId.GetValue();
+	 Critter@ cr=GetPlayer(playerName);
+	if (valid (cr))
+	{
+	GameVar@ LocBaseId1 = GetLocalVar(LVAR_baseId, cr.Id);	
+	LocBaseId1=locId;
+	cr.SetKnownLoc(true, (locId));
+	
+	return 5;
+	}
+	else {
+	return 6;}
+}
+*/
+uint dlg_DelPlayer(Critter& player, Critter@ terminal, string@ playerName)
+{
+uint locId=GetLocId(player);
+	 GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	Critter@ cr=GetPlayer(playerName); 
+	if (valid (cr)&& Lider == player.Id)
+	{
+	cr.UnsetKnownLoc(true, (locId));
+	return 5;
+	}
+	else {
+	return 6;}
+
+}
+
+uint dlg_ChoosePlayer(Critter& player, Critter@ terminal, string@ playerName)
+{
+	 uint locId=GetLocId(player);
+	 GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+	Critter@ cr=GetPlayer(playerName); 
+	if (valid (cr)&& Lider == player.Id)
+	{
+	Lider = cr.Id;	
+	cr.SetKnownLoc(true, (locId));
+	return 5;
+	}
+	else {
+	return 6;}
+}
+
+uint r_Docs(Critter& player, Critter@ npc)
+{
+uint locId=GetLocId(player);
+GameVar@ Lider=GetLocalVar(LLVAR_IdAdminBase, locId);
+if (valid (player) && Lider == player.Id) 
+					{ 
+						Item@ docs = player.AddItem(PID_DOCS_HOUSE,1);
+						int numberLoc = locId;
+						if (valid (docs))
+							{
+							docs.LockerId=numberLoc;
+							docs.Update();
+							}
+					return 10;
+					}
+return 11;
+}
+
+uint r_SellHouse(Critter& player, Critter@ npc)
+{
+Item@ docs=_CritGetItemHand(player);
+	if(valid(docs) && docs.GetType()==ITEM_TYPE_KEY)
+	{
+		Location@ loc = GetLocation(docs.LockerId);
+		if(!valid(loc)) return 10;
+		if (loc.GetProtoId() == 282) return 6;
+		if (loc.GetProtoId() == 283) return 8;
+		if (loc.GetProtoId() == 284) return 7;
+		if (loc.GetProtoId() == 361) return 12;
+	}
+	
+return 9;
+}
+
+uint r_SellHouseEnd(Critter& player, Critter@ npc, int cost)
+{
+Item@ docs=_CritGetItemHand(player);
+if(valid(docs) && docs.GetType()==ITEM_TYPE_KEY) 
+	{
+	Location@ loc = GetLocation(docs.LockerId);
+	if ((valid(loc))) {loc.Reload(); loc.AutoGarbage=true; DeleteLocation(loc.Id); string val = loc.Id; Log("Location № " + val + "Delited");}
+	DeleteItem(docs);
+	player.AddItem(PID_BOTTLE_CAPS,cost);
+	return 11;
+	}
+else return 9;	
+}
+
+uint GetLocId(Critter& cr)
+{
+	Map@ map=cr.GetMap();
+	Location@ loc=map.GetLocation();
+	return loc.Id;
+}

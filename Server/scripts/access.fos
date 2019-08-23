@@ -1,0 +1,187 @@
+﻿#include "_macros.fos"
+import void FlushScreen(Critter& cr, bool fadeOut, uint timeMs) from "effects";
+bool s_Terminal(Critter& player, Scenery& terminal, int skill, Item@ item)
+{
+	if(player.IsPlayer() && skill==-1 && not valid(item))  RunDialog(player,40000,terminal.HexX,terminal.HexY,false);
+	return true;
+}
+
+
+void r_Book(Critter& cr, Critter@ npc)
+{
+if(cr.PerkBase[427]!=0) return;
+if(cr.PerkBase[426]!=0) return;
+if(cr.SkillBase[200]<141) cr.SkillBase[200] = 141;
+if(cr.SkillBase[200]<0) cr.SkillBase[200] += 141;
+if(cr.SkillBase[202]<141) cr.SkillBase[202] = 141;
+if(cr.SkillBase[202]<0) cr.SkillBase[202] += 141;
+if(cr.SkillBase[206]<141) cr.SkillBase[206] = 141;
+if(cr.SkillBase[207]<141) cr.SkillBase[207] = 141;
+if(cr.SkillBase[209]<141) cr.SkillBase[209] = 141;
+if(cr.SkillBase[211]<141) cr.SkillBase[211] = 141;
+if(cr.SkillBase[212]<141) cr.SkillBase[212] = 141;
+if(cr.SkillBase[213]<141) cr.SkillBase[213] = 141;
+if(cr.SkillBase[214]<141) cr.SkillBase[214] = 141;
+if(cr.SkillBase[215]<141) cr.SkillBase[215] = 141;
+if(cr.SkillBase[217]<141) cr.SkillBase[217] = 141;
+}
+
+
+bool ChekId(Critter& cr, Critter@ npc)
+{
+if ((cr.Id == 1)) {return true;}
+return false;
+}
+
+void r_ToGospital(Critter& cr, Critter@ npc)
+{
+GameVar@ var = GetLocalVar(LVAR_stuped,cr.Id);
+var=1;
+Map@ map = cr.GetMap();
+FlushScreen(cr, false, 500);
+cr.TransitToMap(map.Id,555);
+	if(cr.StatBase[ST_INTELLECT]>=6)
+		{
+		cr.StatBase[ST_INTELLECT]-=1;
+	//	cr.SkillBase[200] = 41;
+	//	cr.SkillBase[202] = 41;
+		cr.SkillBase[206] = 41;
+		cr.SkillBase[207] = 41;
+		cr.SkillBase[209] = 41;
+		cr.SkillBase[211] = 41;
+		cr.SkillBase[212] = 21;
+		cr.SkillBase[213] = 41;
+		cr.SkillBase[214] = 21;
+		cr.SkillBase[215] = 21;
+	//	cr.SkillBase[217] = 41;
+		}
+	else
+		{
+		if(cr.StatBase[ST_INTELLECT]>2) cr.StatBase[ST_INTELLECT]-=1;
+		else if(cr.StatBase[ST_INTELLECT]>1) cr.StatBase[ST_INTELLECT]-=1;
+	//	cr.SkillBase[200] = 21;
+	//	cr.SkillBase[202] = 21;
+		cr.SkillBase[206] = 21;
+		cr.SkillBase[207] = 21;
+		cr.SkillBase[209] = 21;
+		cr.SkillBase[211] = 21;
+		cr.SkillBase[212] = 11;
+		cr.SkillBase[213] = 21;
+		cr.SkillBase[214] = 11;
+		cr.SkillBase[215] = 11;
+	//	cr.SkillBase[217] = 21;
+		}
+}
+
+void r_ToExit(Critter& cr, Critter@ npc)
+{
+Map@ map = cr.GetMap();
+FlushScreen(cr, false, 500);
+cr.TransitToMap(map.Id,666);
+}
+
+void r_Lecar(Critter& cr, Critter@ npc)
+{
+GameVar@ var = GetLocalVar(LVAR_stuped,cr.Id);
+var=0;
+FlushScreen(cr, false, 2500);
+	if(cr.StatBase[ST_INTELLECT]>=5)
+		{
+		cr.StatBase[ST_INTELLECT]+=1;
+		if(cr.SkillBase[200]<141) cr.SkillBase[200] = 141;
+		if(cr.SkillBase[200]<0) cr.SkillBase[200] += 141;
+		if(cr.SkillBase[202]<141) cr.SkillBase[202] = 141;
+		if(cr.SkillBase[202]<0) cr.SkillBase[202] += 141;
+		cr.SkillBase[206] = 141;
+		cr.SkillBase[207] = 141;
+		cr.SkillBase[209] = 141;
+		cr.SkillBase[211] = 141;
+		cr.SkillBase[212] = 121;
+		cr.SkillBase[213] = 141;
+		cr.SkillBase[214] = 121;
+		cr.SkillBase[215] = 121;
+		cr.SkillBase[217] = 141;
+		}
+	else
+		{
+		cr.StatBase[ST_INTELLECT]+=1;
+	//	cr.SkillBase[200] = 21;
+	//	cr.SkillBase[202] = 21;
+		cr.SkillBase[206] = 61;
+		cr.SkillBase[207] = 61;
+		cr.SkillBase[209] = 61;
+		cr.SkillBase[211] = 61;
+		cr.SkillBase[212] = 51;
+		cr.SkillBase[213] = 61;
+		cr.SkillBase[214] = 51;
+		cr.SkillBase[215] = 51;
+		cr.SkillBase[217] = 81;
+		}
+}
+
+void r_LecarBh(Critter& cr, Critter@ npc)
+{
+GameVar@ var = GetLocalVar(LVAR_stuped,cr.Id);
+var=0;
+//cr.KarmaBase[KARMA_OFFENDED]=1;
+FlushScreen(cr, false, 2500);
+	if(cr.StatBase[ST_INTELLECT]>=5)
+		{
+		cr.StatBase[ST_INTELLECT]+=1;
+		if(cr.SkillBase[200]<141) cr.SkillBase[200] = 141;
+		if(cr.SkillBase[200]<0) cr.SkillBase[200] += 141;
+		if(cr.SkillBase[202]<141) cr.SkillBase[202] = 141;
+		if(cr.SkillBase[202]<0) cr.SkillBase[202] += 141;
+		cr.SkillBase[206] = 141;
+		cr.SkillBase[207] = 141;
+		cr.SkillBase[209] = 141;
+		cr.SkillBase[211] = 141;
+		cr.SkillBase[212] = 121;
+		cr.SkillBase[213] = 141;
+		cr.SkillBase[214] = 121;
+		cr.SkillBase[215] = 121;
+		cr.SkillBase[217] = 141;
+		}
+	else
+		{
+		cr.StatBase[ST_INTELLECT]+=1;
+	//	cr.SkillBase[200] = 21;
+	//	cr.SkillBase[202] = 21;
+		cr.SkillBase[206] = 61;
+		cr.SkillBase[207] = 61;
+		cr.SkillBase[209] = 61;
+		cr.SkillBase[211] = 61;
+		cr.SkillBase[212] = 51;
+		cr.SkillBase[213] = 61;
+		cr.SkillBase[214] = 51;
+		cr.SkillBase[215] = 51;
+		cr.SkillBase[217] = 81;
+		}
+}
+
+//void _KeyUse(Item& item, bool firstTime)
+//{
+//	item.SetEvent(ITEM_EVENT_USE ,"_AddExp");  /// register use event
+//}
+//
+//bool _AddExp(Item& item, Critter& cr, Critter@ onCritter, Item@ onItem, Scenery@ onScenery)
+//{
+//	if(item.GetProtoId() < PID_EXP1 || item.GetProtoId() > PID_EXP3)return false;
+//	if(item.GetProtoId() == PID_EXP1)
+//	{
+//	cr.StatBase[ ST_EXPERIENCE ] += 5000;
+//	cr.DeleteItem(PID_EXP1,1);
+//	}
+//	if(item.GetProtoId() == PID_EXP2)
+//	{
+//	cr.StatBase[ ST_EXPERIENCE ] += 10000;
+//	cr.DeleteItem(PID_EXP2,1);
+//	}
+//	if(item.GetProtoId() == PID_EXP3)
+//	{
+//	cr.StatBase[ ST_EXPERIENCE ] += 30000;
+//	cr.DeleteItem(PID_EXP3,1);
+//	}
+//	return true;
+//}
+
