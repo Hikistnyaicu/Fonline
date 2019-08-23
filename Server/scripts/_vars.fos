@@ -650,7 +650,8 @@
 #define LVAR_vc_knows_about_delivery                 ( 8849 )
 #define LMVAR_vc_last_bar_dialog                     ( 8850 )
 #define LVAR_vc_mut_charley_hired                    ( 8851 )
-
+#define LVAR_baseId                                  (914)
+#define LLVAR_IdAdminBase                            (9030)
 
 /*************************************************************************************
         Id	Type	Name		Start	Min	Max	Flags
