@@ -29,5 +29,10 @@ asdfasfd.client
 dsfadsf.client
 sssfaf.client
 gfgdf.client
+<<<<<<< HEAD
 Dante.client
 Dantes.client
+=======
+ddsadsa.client
+gdsgds.client
+>>>>>>> d4181f17e74c4f49ecd57ec9726a4a55f3e4903d

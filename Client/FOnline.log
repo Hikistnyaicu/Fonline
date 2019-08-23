@@ -9,7 +9,11 @@ Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
+<<<<<<< HEAD
 Disconnect. Session traffic: send<74>, receive<808457>, whole<808531>, receive real<918345>.
+=======
+Disconnect. Session traffic: send<78>, receive<1019837>, whole<1019915>, receive real<1049425>.
+>>>>>>> d4181f17e74c4f49ecd57ec9726a4a55f3e4903d
 Loaded<344> critter types.
 Load scripts...
 Bind reserved functions...
@@ -27,7 +31,11 @@ Hex field initialization complete.
 Engine initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
+<<<<<<< HEAD
 Disconnect. Session traffic: send<84>, receive<808897>, whole<808981>, receive real<919130>.
+=======
+Disconnect. Session traffic: send<88>, receive<1020277>, whole<1020365>, receive real<1050210>.
+>>>>>>> d4181f17e74c4f49ecd57ec9726a4a55f3e4903d
 Connecting to server<localhost:4000>.
 Connection established.
 Authentication success.
@@ -39,18 +47,33 @@ Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
 Change map...
+<<<<<<< HEAD
 Get hash of map, pid<221>...complete.
 Load map...Load map success.
 Local map loaded.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Change map...
+=======
 Global map loaded.
 FOClient::Net_OnAllItemsSend - Chosen is not created.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
+Disconnect. Session traffic: send<631>, receive<1022850>, whole<1023481>, receive real<1064250>.
+Connecting to server<localhost:4000>.
+Connection established.
+Disconnect. Session traffic: send<641>, receive<1023290>, whole<1023931>, receive real<1065035>.
+Connecting to server<localhost:4000>.
+Connection established.
+Authentication success.
+>>>>>>> d4181f17e74c4f49ecd57ec9726a4a55f3e4903d
+Change map...
+Global map loaded.
+Chosen parameters...complete.
+Quests...Complete.
+Entering to game complete.
+<<<<<<< HEAD
 Change map...
 Get hash of map, pid<24>...Load map<map24> from cache fail.
 Get map...24...New: Tiles Walls Scenery Old:. Map saved.
@@ -63,4 +86,7 @@ Quests...Complete.
 Entering to game complete.
 FOClient::NetInput - Socket error while receive from server, error<WSAECONNRESET, 10054, An existing connection was forcibly closed by the remote host.>.
 Disconnect. Session traffic: send<1978>, receive<857762>, whole<859740>, receive real<1184503>.
+=======
+Disconnect. Session traffic: send<1036>, receive<1024001>, whole<1025037>, receive real<1072179>.
+>>>>>>> d4181f17e74c4f49ecd57ec9726a4a55f3e4903d
 Exit from game.
