@@ -1,3 +1,9 @@
 .fosb
 .fosp
 .fomapb
+*.glslb
+*.cache
+*.fomapb
+*.fosp
+*.glslb
+*.fosb

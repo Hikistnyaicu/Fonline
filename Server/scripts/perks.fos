@@ -33,7 +33,6 @@ bool PerkCheck( Critter& cr, uint perk ) // Export
     switch( perk )
     {
         // Perks
-        PROCESS_PERK1( PE_AWARENESS,           1,  1, cr.ParamBase[ ST_PERCEPTION ] >= 5    );
         PROCESS_PERK1( PE_BONUS_HTH_ATTACKS,   1, 1, cr.ParamBase[ ST_AGILITY ] >= 6       );
         PROCESS_PERK2( PE_BONUS_HTH_DAMAGE,    3,  1, cr.ParamBase[ ST_AGILITY ] >= 6,      cr.ParamBase[ ST_STRENGTH ] >= 6      );
         PROCESS_PERK1( PE_BONUS_MOVE,          2,  1, cr.ParamBase[ ST_AGILITY ] >= 5       );
@@ -118,8 +117,6 @@ void PerkUp( Critter& cr, uint perk ) // Export
     switch( perk )
     {
     // Perks
-    case PE_AWARENESS:         /*Examining a target shows hitpoints, weapon and ammunition count*/
-        break;
     case PE_BONUS_HTH_ATTACKS: /*-1 Ap on HtH attacks*/
         break;
     case PE_BONUS_HTH_DAMAGE:
