@@ -17,12 +17,8 @@ Sprite manager initialization complete.
 Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
-Can't connect to game server, error<WSAECONNREFUSED, 10061, No connection could be made because the target machine actively refused it.>.
-Connecting to server<localhost:4000>.
-Can't connect to game server, error<WSAECONNREFUSED, 10061, No connection could be made because the target machine actively refused it.>.
-Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<90>, receive<829212>, whole<829302>, receive real<1049425>.
+Disconnect. Session traffic: send<90>, receive<829762>, whole<829852>, receive real<1049425>.
 Loaded<344> critter types.
 Load scripts...
 Bind reserved functions...
@@ -40,12 +36,7 @@ Hex field initialization complete.
 Engine initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<100>, receive<829653>, whole<829753>, receive real<1050210>.
-Connecting to server<localhost:4000>.
-Connection established.
-Player registration...complete.
-Registration success.
-Disconnect. Session traffic: send<330>, receive<829687>, whole<830017>, receive real<1050229>.
+Disconnect. Session traffic: send<100>, receive<830205>, whole<830305>, receive real<1050210>.
 Connecting to server<localhost:4000>.
 Connection established.
 Authentication success.
@@ -63,26 +54,10 @@ Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
 Change map...
-Get hash of map, pid<302>...Load map<map302> from cache fail.
-Get map...302...New: Tiles Walls Scenery Old:. Map saved.
+Get hash of map, pid<332>...Load map<map332> from cache fail.
+Get map...332...New: Tiles Walls Scenery Old:. Map saved.
 Change map...
-Get hash of map, pid<302>...complete.
-Load map...Load map success.
-Local map loaded.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Change map...
-Global map loaded.
-FOClient::Net_OnAllItemsSend - Chosen is not created.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Change map...
-Get hash of map, pid<350>...Load map<map350> from cache fail.
-Get map...350...New: Tiles Walls Scenery Old:. Map saved.
-Change map...
-Get hash of map, pid<350>...complete.
+Get hash of map, pid<332>...complete.
 Load map...Load map success.
 Local map loaded.
 Chosen parameters...complete.
@@ -104,5 +79,5 @@ Local map loaded.
 Chosen parameters...complete.
 Quests...Complete.
 Entering to game complete.
-Disconnect. Session traffic: send<3615>, receive<938630>, whole<942245>, receive real<1644853>.
+Disconnect. Session traffic: send<2236>, receive<920322>, whole<922558>, receive real<1527913>.
 Exit from game.

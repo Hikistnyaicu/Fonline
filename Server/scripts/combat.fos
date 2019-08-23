@@ -1706,6 +1706,7 @@ void ApplyDamage( AttackStruct& attack, Critter& target, uint rounds, bool isCri
         }
 
         target.ToDead( anim2Dead, attacker );
+		
     }
     else if( isKo )
     {
@@ -1900,6 +1901,39 @@ void ApplyDamage( AttackStruct& attack, Critter& target, uint rounds, bool isCri
             }
         }
     }
+	
+	//EXPERIENCE SYSTEM	
+  
+  if(target.IsNpc())
+  {
+	int locProtoId=target.GetMap().GetLocation().GetProtoId();
+	int[] noexp={4108, 4109, 4110, 4111};
+	int addexperience;
+	if(target.Stat[ST_CURRENT_HP]<totalDmg) addexperience=target.Stat[ST_CURRENT_HP];
+	else
+	{
+	addexperience=totalDmg;
+	}
+	int IsExp=target.Stat[ST_GIVE_EXP];
+	for(uint i=0; i<noexp.length(); i++) 
+		if(noexp[i]==target.GetProtoId()) IsExp=0;
+		
+	if(valid(realWeapon))
+	{
+		if(realWeapon.GetProtoId()>=10200 && realWeapon.GetProtoId()<10300) addexperience=addexperience/1.33;	
+	}
+	else addexperience*=2;
+	if(addexperience>0 && ( IsExp > 0 ) ) 
+	{	
+		attacker.StatBase[ST_EXPERIENCE]+=(EXPERIENCE_MULTIPLIER*addexperience);
+		if( realWeapon.GetProtoId() >= 10000 && valid(realWeapon) )
+			{
+				realWeapon.Val5+=(EXPERIENCE_MULTIPLIER*addexperience)/10;
+				realWeapon.Update();
+			}
+	}
+  }
+	
 }
 
 void CommenceExplosion( AttackStruct& attack, Map@ map, uint16 tx, uint16 ty, Critter@ target, uint weapPid, uint ammoPid, bool isCritical, uint intentionallyId, bool isRocket, CombatRes[]& results )
@@ -1959,6 +1993,7 @@ void CommenceExplosion( AttackStruct& attack, Map@ map, uint16 tx, uint16 ty, Cr
         if( !validTarget || targetId != critsHit[ i ].Id )
             ApplyDamage( attack, critsHit[ i ], 1, false, intentionally, results );
 }
+
 
 
 void CriticalFailure( Critter& cr, ProtoItem& weapon, uint8 weaponUse, ProtoItem@ ammo, uint eff, CombatRes[]& results )
