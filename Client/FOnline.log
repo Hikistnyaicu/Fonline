@@ -9,52 +9,9 @@ Sound manager initialization...
 Sound manager initialization complete.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<142>, receive<1828412>, whole<1828554>, receive real<1966985>.
-Loaded<344> critter types.
-Load scripts...
-Bind reserved functions...
-Bind reserved functions complete.
-Load scripts complete.
-3d rendering is disabled.
-Interface initialization...
-Signature<IntMess> not found.
-Signature<IntMessLarge> not found.
-Interface initialization complete.
-Item manager initialization...
-Item manager initialization complete.
-Hex field initialization...
-Hex field initialization complete.
-Engine initialization complete.
+FOClient::NetInput - Socket is closed.
+Disconnect. Session traffic: send<10>, receive<0>, whole<10>, receive real<0>.
 Connecting to server<localhost:4000>.
 Connection established.
-Disconnect. Session traffic: send<152>, receive<1828857>, whole<1829009>, receive real<1967770>.
-Connecting to server<localhost:4000>.
-Connection established.
-Authentication success.
-Change map...
-Get hash of map, pid<260>...complete.
-Load map...Load map success.
-Local map loaded.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Change map...
-Global map loaded.
-FOClient::Net_OnAllItemsSend - Chosen is not created.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Change map...
-Get hash of map, pid<220>...complete.
-Load map...Load map success.
-Local map loaded.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Change map...
-Global map loaded.
-FOClient::Net_OnAllItemsSend - Chosen is not created.
-Chosen parameters...complete.
-Quests...Complete.
-Entering to game complete.
-Exit from game.
+FOClient::NetInput - Socket is closed.
+Disconnect. Session traffic: send<20>, receive<0>, whole<20>, receive real<0>.

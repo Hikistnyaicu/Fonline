@@ -31,7 +31,7 @@
 #define GVAR_base_sierra_org                         ( 103 )
 #define GVAR_base_mariposa_org                       ( 104 )
 #define GVAR_base_cathedral_org                      ( 105 )
-#define GVAR_base_enclave_score                      ( 106 )
+#define GVAR_base_SCAV_score                      ( 106 )
 #define GVAR_base_bos_score                          ( 107 )
 #define GVAR_base_sierra_time_event_id               ( 108 )
 #define GVAR_base_mariposa_time_event_id             ( 109 )
