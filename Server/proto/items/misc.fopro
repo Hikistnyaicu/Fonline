@@ -1,4 +1,4 @@
-# 3.0.8
+# 3.1.8
 
 [Proto]
 ProtoId=41
@@ -170,7 +170,7 @@ ProtoId=73
 Type=5
 PicMap=art\items\book.frm
 PicInv=art\inven\science.frm
-Flags=402653214
+Flags=134217758
 DisableEgg=1
 Stackable=1
 Weight=2267
@@ -199,7 +199,7 @@ ProtoId=76
 Type=5
 PicMap=art\items\book.frm
 PicInv=art\inven\deans.frm
-Flags=402653214
+Flags=134217758
 DisableEgg=1
 Stackable=1
 Weight=907
@@ -241,7 +241,7 @@ ProtoId=80
 Type=5
 PicMap=art\items\book.frm
 PicInv=art\inven\frst_bk.frm
-Flags=402653214
+Flags=134217758
 DisableEgg=1
 Stackable=1
 Weight=907
@@ -283,7 +283,7 @@ ProtoId=86
 Type=5
 PicMap=art\items\book.frm
 PicInv=art\inven\scout.frm
-Flags=402653214
+Flags=134217758
 DisableEgg=1
 Stackable=1
 Weight=1360
@@ -406,7 +406,7 @@ ProtoId=102
 Type=5
 PicMap=art\items\book.frm
 PicInv=art\inven\g&a.frm
-Flags=402653214
+Flags=134217758
 DisableEgg=1
 Stackable=1
 Weight=907

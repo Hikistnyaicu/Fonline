@@ -1,5 +1,5 @@
-[22.08.2019 22:46:49] Initializing Object Editor 3.1.8 compatible with 2.14.3 format.
-[22.08.2019 22:46:49]    OS version: Microsoft Windows NT 6.2.9200.0 32-bit
+[10.09.2019 10:58:38] Initializing Object Editor 3.1.8 compatible with 2.14.3 format.
+[10.09.2019 10:58:38]    OS version: Microsoft Windows NT 6.2.9200.0 32-bit
    .NET CLR version: 4.0.30319.42000
    .NET installed versions:
        2.0 (SP 2) - 2.0.50727.4927
@@ -8,6 +8,8 @@
        4.0 Client Profile
        4.0 Full Profile
 
-[22.08.2019 22:46:49] ..\..\Server\text\russ\foobj.msg parsed.
-[22.08.2019 22:46:49] Initializing successful.
-[22.08.2019 22:51:40] Exiting...
+[10.09.2019 10:58:38] ..\..\Server\text\russ\foobj.msg parsed.
+[10.09.2019 10:58:38] Initializing successful.
+[10.09.2019 10:59:20] D:\0_FOnline_NEW_REP\Fonline\Server\proto\items\drug.fopro is already loaded.
+[10.09.2019 11:04:28] Data written to ..\..\Server\text\russ\foobj.msg
+[10.09.2019 11:04:29] Exiting...

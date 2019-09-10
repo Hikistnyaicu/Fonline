@@ -17,3 +17,7 @@ Server/save/clients/last_id.txt
 Client/data/cache/default.cache
 Client/FOnline.log
 Server/save/clients/clients_list.txt
+Client/data/cache/default.cache
+Tools/ObjectEditor/ObjectEditor.log
+*.log
+*.cache
